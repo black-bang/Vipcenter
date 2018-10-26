@@ -1,0 +1,19 @@
+@import "~publicStyle";
+    .am-tabs-default-bar-content{
+          border-bottom: 1px solid #ddd;
+          .am-tabs-default-bar-top {
+    
+      background-color: #fff;
+       span{
+           font-size:13px;
+       }
+      .am-tabs-default-bar-tab-active {
+        color: #08b014;
+      }
+      .am-tabs-default-bar-underline{
+          border-color: #08b014;
+      }
+    }
+
+    }
+    

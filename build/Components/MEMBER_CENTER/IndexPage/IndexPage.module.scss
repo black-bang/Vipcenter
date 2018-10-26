@@ -1,0 +1,87 @@
+@import "~publicStyle";
+
+	.TipBox{
+	width:240px!important;
+	height: 160px!important;
+	background: #FFCC33;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 40%;
+	top: 0;
+	margin: auto;
+	z-index: 99999;
+	border-radius:10px; 
+	display: none;
+	.addVipText{
+		width: 100%;
+		height: 70px;
+		padding: 0 15px;
+		margin-bottom: 15px;
+	}
+	.addVipCardBtn{
+		display: block;
+		margin: 0 30px;
+		width: 180px;
+		height: 45px;
+		background: #fff;
+		color: #919191;
+		border-radius: 45px;
+		text-align: center;
+		line-height: 45px;
+		margin-bottom: 5px;
+	}
+	.addVipCardTip{
+		display: block;
+		width: 100%;
+		text-align: center;
+		color: #858072;
+	}
+}
+
+.IndexPage{
+	background:#ffffff;
+	position: relative;
+}
+.Grid1{
+	margin:10px 15px;
+	.GridItem{
+		height:100%;
+		display:block;
+		border-right:#FFFFFF 1px solid;
+		@include flex(1);
+		@include flexRow("center");
+	}
+	
+}
+
+.Grid2Wrap{
+	overflow:hidden;
+	margin:0px 15px;
+	border-radius:10px;
+	background:#E6E6E6;
+	.Grid2{
+			border-bottom:#FFFFFF 1px solid;
+		.GridItem{
+			height:100%;
+			display:block;
+			border-right:#FFFFFF 1px solid;
+			@include flex(1);
+			@include flexRow("center");
+		}
+	}	
+	.Grid3{
+		.GridItem{
+			height:100%;
+			display:block;
+			border-right:#FFFFFF 1px solid;
+			@include flex(1);
+			@include flexRow("center");
+		}
+	}
+}
+
+.GridLastItem{
+	border-right:none!important;
+}
+

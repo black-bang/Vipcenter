@@ -1,0 +1,29 @@
+@import "~publicStyle";
+html,body{
+  height: 100%;
+  position: absolute;
+}
+    .am-tabs-default-bar-top {
+      border-bottom: none;
+      background-color: #fff;
+        span{
+           font-size:13px;
+       }
+      .am-tabs-default-bar-tab-active {
+        color: #08b014;
+      }
+      .am-tabs-default-bar-underline{
+          border-color: #08b014;
+      }
+    }
+  .tipText {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+  
+    color: #b3b3b3;
+    font-size: 20px;
+    font-weight: 800;
+    margin: auto;
+    
+  }

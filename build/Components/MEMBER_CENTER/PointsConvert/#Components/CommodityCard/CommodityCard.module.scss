@@ -1,0 +1,81 @@
+@import "~publicStyle";
+
+.CommodityCard-Shell{
+	width:50%;
+	float:left;
+	height:300px;
+	display:block;
+	color:#333333;
+	position:relative;
+	overflow: hidden;
+	
+	  &>.already-down{
+		  position: absolute;
+		  width: 60px;
+		  height: 60px;
+		  top: 10px;
+		  right: 10px;
+		  margin: auto;
+		  z-index: 999999;
+		  border: 1px solid #959595;
+		  border-radius: 60px;
+		  text-align: center;
+		  line-height: 60px;
+		  color: #959595;
+		  transform: rotate(-45deg)
+	  }
+		&>.CommodityCard{
+			position:absolute;
+			border:#E6E6E6 1px solid;
+			left:10px;right:10px;bottom:5px;top:5px;
+			@include flexCol("between")
+			&>.Picture{
+				width:100%;
+				height:70%;
+				background-size:100% 100%;
+				@include flexAuto();
+			}
+			&>.Text{
+				padding:5px 10px;
+				background:#ffffff;
+				border-top:#E6E6E6 1px solid;
+				@include flex(1);
+				@include flexAuto();
+			}
+			&>.Point{
+				background:#ffffff;
+				@include flexAuto();
+				@include flexRow("between");
+				overflow: hidden;
+				&>.Points{
+					width: 120px;
+					overflow: hidden;
+					text-align: left;
+				}
+				&>.Point-Bolck{
+					color:#FFFFFF;
+					width: 60px;
+					height: 24px;
+					line-height: 24px;
+					text-align: center;
+					background:#666666;
+					
+				}
+			}		
+		}
+}
+
+.MianTitle{
+	font-size:15px;
+	font-weight:bold;
+	padding-bottom:5px;
+}
+
+.CommodityCard-Shell:nth-child(2n)>.CommodityCard{
+	left:10px;
+	right:5px;
+}	
+.CommodityCard-Shell:nth-child(2n+1)>.CommodityCard{
+	left:5px;
+	right:10px;
+}	

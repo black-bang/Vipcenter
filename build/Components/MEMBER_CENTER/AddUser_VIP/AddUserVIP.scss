@@ -1,0 +1,175 @@
+@import "../../../lib/reset.scss";
+
+
+
+.Number{
+       width: 100%;
+       height: 100%;
+       background-color: #fff;
+  input::-webkit-input-placeholder { /* WebKit browsers */ 
+    color: #9E9E9E; 
+    } 
+    input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */   
+    color: #9E9E9E; 
+    } 
+    input::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+    color: #9E9E9Eed; 
+    } 
+    input:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+    color: #9E9E9E;   
+    } 
+  .tota{
+    width: 90%;
+    height: auto;
+    margin: 0 5%;
+    padding-top:12px;
+   // margin: 0 auto;
+ p{
+   display: block;
+  font-size:16px;
+  color: #62696C;
+  margin-bottom:78px; 
+ }
+  }
+  .number{
+    width: 100%;
+    height: 45px;
+    padding: 0 5%;
+    display: flex;
+    border-bottom:1px solid #EAEAEA;
+    overflow: hidden;
+    span{
+      display: block;
+        width: 20%;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        font-size: 18px;
+    }
+   input{
+       width: 60%;
+       height: 100%;
+        border:none;
+        background-color:#fff;
+        font-size:16px;
+        color: #000;
+        outline:none;
+        
+    }
+  }
+
+    .code{
+    width: 100%;
+    height: 45px;
+    padding: 0 5%;
+    display: flex;
+    border-bottom:1px solid #EAEAEA;
+    overflow: hidden;
+    span{
+      display: block;
+        width: 20%;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        font-size: 18px;
+    }
+     button{
+        display: block;
+        width: 45%;
+        float: right;
+        border: none;
+        background: none;
+    }
+   input{
+       width: 40%;
+       height: 100%;
+        border:none;
+        background-color:#fff;
+        font-size:16px;
+        color: #000;
+        outline:none;
+        
+    }
+  }
+  .num-State{
+    width: 100%;
+    height: 30px;
+    padding: 0 5%;
+    color: #F64547;
+    line-height: 30px;
+    margin-bottom: 10px;
+    .numState{
+       width: 100%;
+       height: 100%;
+      color: #F64547;
+      text-align: left;
+      line-height: 30px;
+      margin-bottom: 10px;
+  
+  }
+}
+  .nextBtn{
+    display: block;
+    border: none;
+    width: 90%;
+    height: 45px;
+    margin:0 5%;
+    background-color:#BCBCBC ;
+    color:#EBF7ED;
+    line-height: 45px;
+    text-align: center;
+    font-size: 16px;
+    outline: none;
+    overflow: hidden;
+  }
+  .Coded{
+    width: 90%;
+    height: 30px;
+    margin: 0 5%;
+    display: block;
+    margin-bottom: 35px;
+  span{
+    display: block;
+    float: right;
+    width: 30%;
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
+    color: #aaa;
+  }
+  }
+  .stepState{
+    width:60%;
+    height: 30px;
+    margin: 0 20%;
+    display: flex;
+    justify-content:center;
+  .span_wrap{
+         width: auto;
+        height: 30px;
+        margin: 0 auto;
+        display: flex;
+        justify-content:center;
+  span{
+     width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    line-height: 30px;
+    background-color: #BCBCBC;
+    color: #fff;
+    text-align: center;
+
+  }
+  .one_l,.two_l,.tree_l{
+    width: 33px;
+    height: 1px;
+    margin-top: 15px
+  }
+  .nowState{
+    background: #1AAE15;
+  }
+ }
+  }
+
+
+}

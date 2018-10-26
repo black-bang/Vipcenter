@@ -1,0 +1,39 @@
+@import "~publicStyle";
+
+.List{
+	margin-bottom:10px;
+}
+.AutoBlock{
+	margin-left:20px;
+	@include flex(1);
+}
+
+.Bottom{
+	background:#ffffff;
+	@include flexRow("right");
+	border: 1px solid #eee;
+	&>.PayNumber{
+		margin:0px 20px;
+	}
+	&>.submit{
+			    color:#FFFFFF!important;
+				padding:20px 25px;
+				background:  rgb(4, 190, 19)!important;
+				border-radius: 0!important;
+				
+		&>a{
+				color:#FFFFFF;
+			
+				
+		}
+	}
+}
+.save{
+	margin-bottom: 30px!important;
+}
+.saveText{
+	border: none;
+	width: 90%;
+	height: 100%;
+	padding-left: 5px;
+}

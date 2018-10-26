@@ -1,0 +1,207 @@
+@import "../../../../../../lib/reset.scss";
+.datail_content {
+  @include rect(100%, 100%);
+  background-color: #f5f5f5;
+  overflow: auto;
+  .datail_top {
+    @include rect(100%, auto);
+    background: #fff;
+    padding-bottom: 0.1rem;
+    overflow: hidden;
+    .inform_box {
+      @include rect(90%, auto);
+      margin: 0 5%;
+      //background: #f5f5f5;
+      background-size: 100% 100%;
+      .storeinform {
+        @include rect(90%, 0.52rem);
+        margin: 0 5%;
+        margin-top: 0.15rem;
+       // background: #f5f5f5;
+    
+        overflow: hidden;
+        border-bottom: 1px solid #879298;
+        @include flexbox();
+        span {
+          display: block;
+          @include rect(0.4rem, 0.4rem);
+          border-radius: 0.03rem;
+          margin-top: 0.08rem;
+          background: #aaa;
+             }
+        p{
+          display: block;
+          margin-left: 0.08rem;
+          @include rect(2.4rem, 0.4rem);
+          margin-top: 0.08rem;
+          line-height: 0.4rem;
+          color: #3F3F3F;
+          font-size: 0.16rem;
+        }
+      }
+    //   卡券详情
+      .card_inform {
+        @include rect(90%, 0.75rem);
+        margin: 0 5%;
+        .top {
+          @include rect(100%, 0.6rem);
+          @include flexbox();
+          .left {
+            @include rect(60%, 0.6rem);
+            span {
+              display: block;
+              @include rect(100%, 0.3rem);
+              margin-top: 0.1rem;
+              line-height: 0.3rem;
+              font-size: 0.18rem;
+              color: #656565;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+            p {
+              display: block;
+              width: 100%;
+              color: #bcbcbc;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 2;
+              overflow: hidden;
+            }
+          }
+          .right {
+            @include rect(40%, 0.6rem);
+            color: #5bc1ac;
+            @include flexbox();
+            text-align: right;
+            @include align-items(center);
+            @include justify-content(flex-end);
+            em {
+              font-size: 0.14rem;
+            }
+            span {
+              font-size: 0.24rem;
+              font-family: "黑体";
+            }
+          }
+        }
+        .bottom {
+                 @include rect(100%, 0.3rem);
+            p{
+                line-height: 0.3rem;
+                 color: #bcbcbc;
+                 font-size: 0.14rem;
+            }
+        }  
+    }
+// 卡券二维码
+.card_pic{
+          @include rect(90%,2.5rem);
+        // background: #aaa;
+          margin: 0 5%;
+  .top{
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(center);
+      margin-top: 0.05rem;
+        .Qcard{
+              @include rect(1.84rem,1.84rem);
+              background: #aaa;
+              border-radius: 0.06rem; 
+    }
+  }
+  .bottom{
+          @include flexbox();
+          @include align-items(center);
+          @include justify-content(center);
+          @include flex-direction(column);
+          margin-top: 0.05rem;
+      .card{
+          @include rect(1.84rem,0.3rem);
+          padding: 0 0.2rem;
+          background: #fff;
+          line-height: 0.3rem;
+          color: #8B8B8B;
+          font-size: 0.16rem;
+          margin-bottom: 0.05rem;
+          text-align: center;
+      }
+      .tip{
+          color: #A5A5A5;
+      }
+  }
+}
+    }
+  }
+  // 门店地址
+  .address{
+    @include rect(100%,0.65rem);
+    background: #fff;
+    padding: 0.05rem 0.2rem;
+    margin: 0.15rem 0;
+    @include flexbox();
+      .storeAddress{
+        @include rect(80%,100%);
+        border-right: 1px solid #EFEFEF;
+        h3{
+             @include rect(100%,0.3rem);
+             line-height: 0.3rem;
+            // overflow: hidden;
+             overflow-x: auto;
+             color: #6B6B6B;
+             font-size: 0.16rem;
+         }
+        p{
+           @include rect(100%,0.24rem);
+           @include flexbox();
+           span{
+             display: block;
+              @include rect(85%,0.24rem);
+             line-height: 0.24rem;
+             color: #AEAEAE;
+             overflow: hidden;
+             text-overflow: ellipsis;
+             white-space: nowrap;
+           }
+           em{
+             display: block;
+             @include rect(0.2rem,0.2rem);
+             img{
+               @include rect(100%,100%);
+             }
+           }
+         }
+      }
+      .storeTel{
+           @include rect(20%,100%);
+           @include flexbox();
+           @include align-items(center);
+           @include justify-content(center);
+           span{
+             display: block;
+             @include rect(0.2rem,0.2rem);
+             img{
+               @include rect(100%,100%);
+             }
+           }
+      }
+  }
+  // 注意事项
+  .notice{
+    @include rect(100%,1.4rem);
+    background-color: #fff;
+    padding: 0 0.15rem;
+    color: #C7C7C7;
+    h5{
+      @include rect(100%,0.3rem);
+      line-height: 0.3rem;
+    }
+    p{
+       @include rect(100%,0.24rem);
+      line-height: 0.24rem;
+      span{
+        color: #5bc1ac;
+      }
+    }
+  }
+}

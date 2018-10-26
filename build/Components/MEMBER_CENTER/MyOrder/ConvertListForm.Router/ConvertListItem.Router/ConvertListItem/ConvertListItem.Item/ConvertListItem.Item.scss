@@ -1,0 +1,47 @@
+@import "~publicStyle";
+.Order_list {
+  width: 100%;
+  height: 100% !important;
+  margin-bottom: 15px !important;
+  background-color: #fff;
+  overflow: hidden;
+  .translateInfo {
+    height: 45px;
+    line-height: 45px;
+    .translateName {
+      display: flex;
+      .iconPicture {
+        width: 30px;
+        height: 30px;
+        margin: 7.5px 5px;
+      }
+    }
+  }
+  .ConvertInform {
+    height: 80px !important;
+    .InformPicture {
+      width: 60px;
+      height: 60px;
+    }
+    .leftInform {
+      display: flex;
+      .leftInformName {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        height: 60px;
+        width: 160px;
+      }
+    }
+  }
+  .listBottom {
+    .contentGuide {
+      width: 90px;
+      height: 30px;
+      border: 1px solid #aaa;
+      border-radius: 45px;
+      line-height: 30px;
+      text-align: center;
+    }
+  }
+}

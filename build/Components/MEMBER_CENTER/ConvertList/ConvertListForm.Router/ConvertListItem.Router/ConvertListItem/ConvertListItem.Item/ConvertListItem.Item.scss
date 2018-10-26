@@ -1,0 +1,70 @@
+@import "~publicStyle";
+.Convert_list {
+  width: 100%;
+  height: 168px !important;
+  margin-bottom: 10px !important;
+  background-color: #fff;
+  .Line {
+    display: none !important;
+  }
+  .translateInfo {
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 15px;
+    border-bottom: 1px solid #eee;
+    .translateName {
+      display: flex;
+      .iconPicture {
+        width: 20px;
+        height: 20px;
+        margin: 11.5px 5px;
+        background-image: url("../../../../../../../static/Order/UseShop.png");
+        background-size: 100% 100%;
+      }
+    }
+  }
+  .ConvertInform {
+    border-bottom: 1px solid #eee;
+    width: 100%!important;
+    height: 80px !important;
+    	padding-left:20px;
+   	padding-right:20px;
+    display: flex;
+  	@include flexRow("between");
+    background: none;
+    .InformPicture {
+      width: 60px;
+      height: 60px;
+    }
+    .leftInform {
+      display: flex;
+      .leftInformName {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        height: 60px;
+        width: 160px;
+      }
+    }
+    .rightInform{
+      width: 90px;
+      .rightText{
+             overflow: hidden;
+             text-overflow: ellipsis;
+             white-space: nowrap;
+      }
+    }
+  }
+  .listBottom {
+    .contentGuide {
+      width: 70px;
+      height: 24px;
+      font-size: 12px;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      line-height: 24px;
+      text-align: center;
+    }
+  }
+}

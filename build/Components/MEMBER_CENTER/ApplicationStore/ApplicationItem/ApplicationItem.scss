@@ -1,0 +1,57 @@
+@import "../../../../lib/reset.scss";
+
+    .list{
+        @include rect(100%,0.65rem);
+        padding: 0.05rem 0.1rem;
+        @include flexbox();
+        border-bottom:1px solid #F3F3F5;
+        background: #fff;
+      .storeAddress{
+        @include rect(85%,100%);
+        border-right: 1px solid #eee;
+        h3{
+             @include rect(100%,0.3rem);
+             line-height: 0.3rem;
+            // overflow: hidden;
+             overflow-x: auto;
+             color: #6B6B6B;
+             font-size: 0.16rem;
+         }
+        p{
+           @include rect(100%,0.24rem);
+           @include flexbox();
+           span{
+             display: block;
+              @include rect(90%,0.24rem);
+             line-height: 0.24rem;
+             color: #AEAEAE;
+             overflow: hidden;
+             text-overflow: ellipsis;
+             white-space: nowrap;
+           }
+           em{
+             display: block;
+             @include rect(0.2rem,0.2rem);
+             img{
+               @include rect(100%,100%);
+             }
+           }
+         }
+      }
+      .storeTel{
+           @include rect(15%,100%);
+           @include flexbox();
+           @include align-items(center);
+           @include justify-content(center);
+           span{
+             display: block;
+             @include rect(0.2rem,0.2rem);
+             a{
+                @include rect(100%,100%);
+               img{
+               @include rect(100%,100%);
+             }
+             }
+           }
+      }
+  }

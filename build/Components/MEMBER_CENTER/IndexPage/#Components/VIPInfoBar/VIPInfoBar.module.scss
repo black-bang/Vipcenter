@@ -1,0 +1,34 @@
+@import "~publicStyle";
+
+
+.VIPInfoBar{
+	background:#7b503d;
+}
+.VIPInfoBar-Top{
+	padding:30px 20px;
+	@include flexRow("between");
+	&>.VIPMessage{
+		color:#ffffff;
+		margin-left:10px;
+		@include flex(1);
+		&>.Name{
+			font-size:20px;
+			font-weight:bold;
+		}
+		&>.line{
+			margin:5px 0px;
+			border-bottom:#ccc 1px solid;
+		}
+		&>.Mobile{
+			
+		}
+	}
+}
+
+.VIPInfoBar-Bottom{
+	color:#FFFFFF;
+	font-size:14px;
+	padding:5px 30px;
+	background:rgba(0,0,0,0.5);
+	@include flexRow("between");
+}

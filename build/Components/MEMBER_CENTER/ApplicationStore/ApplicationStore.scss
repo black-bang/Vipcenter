@@ -1,0 +1,7 @@
+@import "../../../lib/reset.scss";
+.cnotent{
+     @include rect(100%,100%);
+     background-color: #F6F6F6;
+     position: relative;
+  
+}

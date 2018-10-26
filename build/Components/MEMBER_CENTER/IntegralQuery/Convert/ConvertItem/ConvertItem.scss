@@ -1,0 +1,39 @@
+@import "../../../../../lib/reset.scss";
+       
+        li{
+            @include rect(100%,0.6rem);
+            padding: 0.05rem 2%;
+            @include flexbox();
+            @include justify-content(space-around);
+            border-bottom: 1px solid #ddd;
+            background: #fff;
+            .text{
+                @include rect(65%,100%);
+                p{
+                    color: #A5A5A5;
+                    @include rect(100%,40%);
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap
+                }
+                   span{
+                        margin-left: 0.1rem;
+                    }
+                h4{
+                     @include rect(100%,50%);
+                     font-size: 0.14rem;
+                     line-height: 0.24rem;
+                     overflow-x: auto;
+                     //text-overflow: ellipsis;
+                     white-space: nowrap
+                }
+            }
+            .points{
+                @include rect(45%,100%);
+                line-height: 0.6rem;
+                text-align: right;
+                font-size: 0.16rem;
+                color: #239023;
+          
+            }
+        }       

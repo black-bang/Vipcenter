@@ -1,0 +1,16 @@
+@import "../../../../lib/reset.scss";
+.ConvertList {
+    @include flexbox();
+     @include rect(100%,100%);
+     overflow: auto;
+    .am-tabs-default-bar-top {
+      border-bottom: none;
+      background-color: #fff;
+      .am-tabs-default-bar-tab-active {
+        color: #08b014;
+      }
+      .am-tabs-default-bar-underline{
+          border-color: #08b014;
+      }
+    }
+}

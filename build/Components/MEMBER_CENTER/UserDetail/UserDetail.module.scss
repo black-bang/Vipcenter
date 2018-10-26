@@ -1,0 +1,27 @@
+@import "~publicStyle";
+
+
+.LabelNames{
+	//max-width:260px;
+	overflow:scroll;
+	padding-top:5px;
+	white-space:nowrap;	
+	position:absolute;
+	left:80px;right:40px;
+}
+.Mobile{
+	margin-right: 15px!important;
+}
+.address{
+	width: 120px;
+	height: 30px;
+	background: #fff;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	display: none;
+
+}

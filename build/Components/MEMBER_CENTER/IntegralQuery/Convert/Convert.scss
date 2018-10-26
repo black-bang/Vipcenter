@@ -1,0 +1,61 @@
+@import "../../../../lib/reset.scss";
+.convert{
+    list-style: none;
+    background-color: #fff;
+    @include rect(100%,100%);
+    overflow: auto;
+    .convert_box{
+          @include rect(100%,100%);
+          background-color: rgba(0, 0, 0, 0.4);
+          z-index: 9999999;
+            .hidden{
+                @include rect(2.1rem,0.8rem);
+                background: #fff;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                text-align: center;
+                color: #333;
+                opacity: 1;
+                p{
+                    @include rect(100%,0.45rem);
+                    line-height: 0.45rem;
+                }
+                p:nth-of-type(2){
+                    @include rect(100%,0.24rem);
+                    line-height: 0.24rem;
+                    @include flexbox();
+                    @include justify-content(space-around)
+                }
+            }
+    }
+    .Convert_List{
+        @include rect(100%,auto);
+        margin-bottom: 5px;
+        .listTop{
+            @include rect(100%,0.35rem);
+            padding: 0 2%;
+            margin: 0;
+            border-bottom: 1px solid #ddd;
+            background: #fff;
+            @include flexbox();
+            @include justify-content(space-between);
+                .dataTime{
+                  line-height: 0.35rem;
+                 text-indent: 0.1rem;
+                 font-size: 0.16rem;
+                 color: #000;
+                 span{
+                      text-decoration: underline;
+                     font-size: 0.16rem;
+                 }
+            }
+            .iconPic{
+               margin: 0.08rem 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,105 @@
+@import "../../../../lib/reset.scss";
+
+.Points{
+    @include rect(100%,100%);
+    background: #fff;
+    // 积分显示
+        .Points_number{
+            @include rect(100%,1.2rem);
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(center);
+            @include flex-direction(row);
+            position: relative;
+            .number{
+                @include rect(2.4rem,0.6rem);
+                margin-bottom: 0.15rem;
+                p{
+                    display: block;
+                    @include rect(100%,0.3rem);
+                    text-align: center;
+                    line-height: 0.3rem;
+                    font-size: 0.18rem;
+                }
+                p:nth-of-type(2){
+                    @include rect(100%,0.36rem);
+                    font-size: 0.36rem;
+                    //overflow: hidden;
+                } 
+            }
+             .care{
+                 
+                    @include rect(100%!important,0.3rem);
+                    line-height: 0.3rem;
+                    text-decoration: underline;
+                    color: #5BD065;
+                    position:absolute;
+                    bottom:0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    text-align: center;
+                  
+                }
+        }
+        .squre{
+            @include rect(100%,0.1rem);
+            background: #D8D8D8;
+        }
+        // 积分详细表
+   .Points_inform{
+       @include rect(90%,auto);
+       margin: 0 5%;
+       margin-top: 0.05rem;
+       span{
+           display: block;
+           @include rect(100%,0.3rem);
+           font-size: 0.16rem;
+           line-height: 0.3rem;
+           color: #4E4E4E;
+       }
+            .tab{
+                table{
+                     @include rect(100%,100%);
+                     margin-top: 0.05rem;
+                    tr{
+                        @include rect(100%,0.3rem);
+                        border: 1px solid #333;
+                        background-color: #fff;
+                        color: #8F8F8F;
+                     
+                        td{
+                           text-align: center;
+                           line-height: 0.3rem;
+                           overflow: hidden;
+                           text-overflow: ellipsis;
+                           white-space: nowrap;
+                        }
+                         td:nth-of-type(1){
+                           @include rect(20%,100%);
+                        }
+                        td:nth-of-type(2){
+                            @include rect(78%,100%);
+                            padding-left:0.15rem; 
+                            text-align: left;
+                            border-left:1px solid #333; 
+                        }
+                    }
+                    thead{
+                        tr{
+                            td{
+                                text-align: center!important;
+                                font-size: 16px!important;
+                                color: #000;
+                            }
+                        }
+                    }
+            }
+            p{
+                @include rect(100%,0.3rem);
+                line-height: 0.3rem;
+                color: #A4A4A4;
+            }
+        }
+   }
+}

@@ -1,0 +1,139 @@
+@import "../../../lib/reset.scss";
+
+.myRights_cnotent{
+  @include rect(100%,100%);
+  background-color: #fff;
+     overflow: auto;
+  .bankCard{
+    @include rect(96%,1.8rem);
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+    @include flex-direction(row);
+    background-image:url(../../../static/MyRights/bg.png);
+    background-size: 100% 100%;
+    margin: 0 2%;
+    margin-top: 0.15rem;
+    border-radius: 0.05rem;
+    position: relative;
+    .bankCard_texts{
+        @include rect(2.1rem,0.72rem);
+        @include flexbox();
+        @include flex-direction(column);
+        h1{
+          font-size: 0.32rem;
+          color: #4C2E0E;
+          text-align: center;
+          margin: 0;
+          -webkit-text-stroke: 1px #fff;
+        }
+        span{
+          margin: 0 auto;
+          text-align: center;
+          font-size: 0.18rem;
+          color: #4c2c0a;
+           //text-decoration:underline;
+          // border-bottom: 1px solid #4c2c0a;
+          -webkit-text-stroke: 1px #fff;
+          em{
+            display: block;
+            @include rect(100%,0.03rem);
+            background: #fff;
+            overflow: hidden;
+            margin-top: -0.05rem;
+            border-radius: 0.03rem;
+            span{
+              display: block;
+              @include rect(98.5%,0.01rem);
+              background: #4C2E0E;
+              margin: 0.01rem;
+            }
+          }
+ 
+        }
+    } 
+    p{
+      position: absolute;
+      right: 0.15rem;
+      bottom: 0.05rem;
+       color: #fff;
+    }       
+  }
+  // 会员权益
+  .mumberRights{
+    margin-top: 0.15rem;
+    @include rect(100%,auto);
+
+    h1{
+      @include rect(96%,0.3rem);
+      padding: 0;
+      margin: 0 2%;
+      color: #0A0A0A;
+      font-size: 0.16rem;
+    }
+    .cardInform{
+   @include rect(100%,auto);  
+   overflow: auto;
+    table{
+          @include rect(150%,auto);
+          margin: 0 2%;
+          padding: 0;
+          position: relative;
+          overflow: auto;
+         tr{
+          @include rect(100%,0.3rem);
+          background-color: #fff;
+          border: 1px solid #aaa;
+          td{
+             border: 1px solid #aaa;
+             line-height: 0.3rem;
+             text-align: center;
+             color: #666E6C;
+          }
+          td:nth-of-type(1){
+               @include rect(18%,0.3rem);
+          }
+          td:nth-of-type(2){
+               @include rect(30%,0.3rem);
+               text-align: left;
+               padding-left: 0.05rem;
+           }
+            td:nth-of-type(3){
+               @include rect(30%,0.3rem);
+               text-align: left;
+               padding-left: 0.05rem;
+           }
+        }
+        thead{
+          tr{
+            td{
+               text-align: center!important;
+               color: #0A0A0A;
+               font-size: 0.16rem;
+            }
+          }
+        }
+    }
+     }
+  }
+  //会员卡使用须知
+  .useCard{
+    @include rect(100%,auto);
+    margin-top: 0.15rem;
+   h1{
+    @include rect(88%,0.3rem);
+    margin: 0 6%;
+    font-size: 0.16rem;
+    color: #0A0A0A;
+   }  
+     p{
+     @include rect(90%,auto);
+     margin: 0 5%;
+     font-size: 0.14rem;
+     line-height: 0.24rem;
+     margin-bottom: 0.08rem;
+     color: #666E6C;
+   }
+  
+  }
+}
