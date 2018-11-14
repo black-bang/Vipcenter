@@ -73,7 +73,7 @@ class AddUserVIP extends React.Component {
         try {
           const result = await ajax.post({
             url: "/api/User_Account/SendLoginMobileVerifyCode/",
-            data: { mobile: this.state.Phonevalue }
+            data: { mobile: this.state.Phonevalue, openId: this.query["OpenId"] }
           });
 
           let time = 60;
@@ -114,6 +114,7 @@ class AddUserVIP extends React.Component {
               openId: this.query.openId,
               vipNumber: this.state.Phonevalue,
               validCode: this.state.Codevalue,
+              openId: this.query["OpenId"]
             }
           });
    

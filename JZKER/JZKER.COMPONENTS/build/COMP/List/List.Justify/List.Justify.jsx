@@ -2,7 +2,7 @@ import css from "./List.Justify.scss"
 import ListPublicCss from "../List/List.scss"
 import {Icon as AntdIcon} from "antd-mobile"
 import {NavLink} from "react-router-dom"
-import Icon from "../../Icon/index.js"
+import Icon from '../../Icon/index.js'
 
 
 export default class ListJustify extends React.PureComponent {

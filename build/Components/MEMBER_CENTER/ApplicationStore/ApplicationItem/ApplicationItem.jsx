@@ -48,7 +48,7 @@ class ApplicationItem extends React.PureComponent {
     this.query = url.parse(this.props.location.search, true)["query"];
   }
   get ComputedStyle(){
-    if (this.props.Telephone == 'null') {
+    if (this.props.Telephone == 'null' || this.props.Telephone =='') {
       return { pointerEvents:'none',           
       }
     }
@@ -72,7 +72,7 @@ class ApplicationItem extends React.PureComponent {
       this.props.Area,
       this.props.TranslateAddress
     ];
-    console.log(SeleteAdress);
+    //console.log(SeleteAdress);
     storage.setSeleteAdressInfo(SeleteAdress);
       this.props.history.goBack();
     } else {
@@ -107,13 +107,13 @@ class ApplicationItem extends React.PureComponent {
   }
   async componentDidMount(){
   //  console.log(this.props.Lat);
-    if (this.props.Telephone == 'null'){
+    if (this.props.Telephone == 'null' || this.props.Telephone ==''){
       this.refs.picStae.style.opacity='.3'
     }
-      if (this.props.Lat == 'null'){
-        this.refs.picStae.style.opacity = ".1";
-        this.refs.toMapAddress.style.display = "none";
-    }
+    //   if (this.props.Lat == 'null'){
+    //     this.refs.picStae.style.opacity = ".1";
+    //     this.refs.toMapAddress.style.display = "none";
+    // }
   }
 }
 export default ApplicationItem;

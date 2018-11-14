@@ -31,9 +31,9 @@
 			@include flexCol("between")
 			&>.Picture{
 				width:100%;
-				height:70%;
+				height:68%;
 				background-size:100% 100%;
-				@include flexAuto();
+				// @include flexAuto();
 			}
 			&>.Text{
 				padding:5px 10px;
@@ -46,21 +46,29 @@
 				background:#ffffff;
 				@include flexAuto();
 				@include flexRow("between");
-				overflow: hidden;
+			
+				padding-left:10px;
+				width: 100%;
 				&>.Points{
-					width: 120px;
-					overflow: hidden;
-					text-align: left;
+						//overflow: hidden;
+						text-align: left;
+						font-size: 12px;
+						height: 30px;
+						line-height: 30px;
 				}
-				&>.Point-Bolck{
+			&>.Point-right{
+				display: flex;
+				@include flexRow("between");
+					&>.Point-Bolck{
 					color:#FFFFFF;
-					width: 60px;
-					height: 24px;
-					line-height: 24px;
+					width: 45px;
+					height: 28px;
+					line-height: 28px;
 					text-align: center;
 					background:#666666;
 					
 				}
+			}
 			}		
 		}
 }
@@ -72,10 +80,10 @@
 }
 
 .CommodityCard-Shell:nth-child(2n)>.CommodityCard{
-	left:10px;
+	left:5px;
 	right:5px;
 }	
 .CommodityCard-Shell:nth-child(2n+1)>.CommodityCard{
 	left:5px;
-	right:10px;
+	right:5px;
 }	

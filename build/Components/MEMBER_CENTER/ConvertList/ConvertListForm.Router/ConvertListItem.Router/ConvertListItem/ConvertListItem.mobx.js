@@ -17,7 +17,7 @@ export default class OrderListState {
 		try {
 			yield this.ScrollViewState1.loadInitData({
 				url: "/api/Order/ListAsync",
-				data: { orderType: '1', accountId: this.query['AccountId'], orderState:"" }
+				data: { orderType: '1', accountId: this.query['AccountId'], orderState: "", openId: this.query["OpenId"]}
 			})	
 			//console.log(this.ScrollViewState1)	
 		} catch (error) {
@@ -29,7 +29,7 @@ export default class OrderListState {
 	    try {
 			yield this.ScrollViewState2.loadInitData({
 				url: "/api/Order/ListAsync",
-				data: { orderType: '1', accountId: this.query['AccountId'], orderState: "1"  }
+				data: { orderType: '1', accountId: this.query['AccountId'], orderState: "1", openId: this.query["OpenId"]}
 			})
 	    } catch (error) {
 	        throw error
@@ -40,7 +40,7 @@ export default class OrderListState {
 	    try {
 			yield this.ScrollViewState3.loadInitData({
 				url: "/api/Order/ListAsync",
-				data: { orderType: '1', accountId: this.query['AccountId'], orderState: "2" }
+				data: { orderType: '1', accountId: this.query['AccountId'], orderState: "2", openId: this.query["OpenId"]}
 			})
 	    } catch (error) {
 	        throw error

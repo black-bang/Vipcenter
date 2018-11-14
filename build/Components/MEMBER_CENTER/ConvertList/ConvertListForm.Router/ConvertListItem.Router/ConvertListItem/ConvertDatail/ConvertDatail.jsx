@@ -4,6 +4,7 @@ import "./ConvertDatail.scss";
 import Map from "../../../../../../../static/card/map.png";
 import Tel from "../../../../../../../static/card/tel.png";
 import Bg from "../../../../../../../static/card/datail_bg.png";
+import Have from '../../../../../../../static/Order/have.png'
 import { Toast, WhiteSpace, WingBlank, Button } from "antd-mobile";
 import PositionLink from '../../../../../../page/PositionLink.js'
 class ConvertDatail extends React.Component {
@@ -26,6 +27,11 @@ class ConvertDatail extends React.Component {
                   <span>x{this.state.Number}</span>
                 </div>
               </div>
+              <div className="cardStates">
+                <span>
+                  <img src={Have} />
+                </span>
+              </div>
             </div>
             {/* 优惠券二维码 */}
             <div className="card_pic">
@@ -34,10 +40,10 @@ class ConvertDatail extends React.Component {
               </div>
               <div className="bottom">
                 <div className="card" ref="cardNumber">
-                {this.state.Cnumber}
+                  {this.state.Cnumber}
                 </div>
                 <div className="tip">
-                  <p>到店展示卡券，进行核销</p>
+                  <p>到店展示卡券，进行领取</p>
                 </div>
               </div>
             </div>
@@ -108,7 +114,7 @@ class ConvertDatail extends React.Component {
     try{
       const result = await ajax.get({
             url:'/api/Order/ModelAsync',
-            data: { orderNo: this.query['OrderNo']}
+           data: { orderNo: this.query['OrderNo'], openId: this.query["OpenId"]}
       })
       this.setState({data:result})
       this.setState({ Name: result.GoodList[0].Name });

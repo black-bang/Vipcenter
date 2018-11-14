@@ -3,6 +3,7 @@
 .List{
 	margin-bottom:10px;
 }
+
 .AutoBlock{
 	margin-left:20px;
 	@include flex(1);
@@ -36,4 +37,14 @@
 	width: 90%;
 	height: 100%;
 	padding-left: 5px;
+}
+.box{
+	  display: flex;
+}
+.taketypePicture{
+	    width: 20px;
+        height: 20px;
+        margin: 11.5px 5px;
+        background-image: url("../../../../../static/Order/kuaidi.png");
+        background-size: 100% 100%;
 }

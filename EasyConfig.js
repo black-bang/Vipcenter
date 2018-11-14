@@ -8,6 +8,7 @@ module.exports={
 		//分别对应(测试,开发,产品)3种不同的接口地址
 		test:"http://106.14.115.8:8008/",
 		development:"http://106.14.115.8:8008/",
+		//development: "http://192.168.65.113:8000/",
 		production:"http://api.jzker.cn/",
 	},
 	modules:[

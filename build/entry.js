@@ -24,6 +24,10 @@ import ApplicationStore from "./Components/MEMBER_CENTER/ApplicationStore/Applic
 import AddUserVIP from "./Components/MEMBER_CENTER/AddUser_VIP/AddUserVIP.jsx";
 // 个人资料
 import UserInfo from './Components/MEMBER_CENTER/UserDetail/UserDetail.jsx'
+// 积分凭证
+import Submission from "./Components/MEMBER_CENTER/Submission/Submission.jsx";
+// 测试页面
+import Test from "./Components/MEMBER_CENTER/Test.jsx";
 
 import { HashRouter, Route, Switch, Redirect } from "react-router-dom"; 
 import { configure } from "mobx"
@@ -48,7 +52,7 @@ const target = document.getElementById("AppView");
         {/* 积分兑换列表 */}
         <Route path="/ConvertListRouter" component={ConvertListRouter} />
         {/* 订单列表 */}
-        <Route path="/MyOrderRouter" component={MyOrderRouter} />  
+        <Route path="/MyOrderRouter" component={MyOrderRouter} />
         {/* 我的权益 */}
         <Route path="/MyRights" component={MyRights} />
         {/* 适用门店 */}
@@ -57,6 +61,10 @@ const target = document.getElementById("AppView");
         <Route path="/AddUserVIP" component={AddUserVIP} />
         {/* 个人资料 */}
         <Route path="/UserInfo" component={UserInfo} />
+        {/* 积分凭证 */}
+        <Route path="/Test" component={Test} />
+        {/* 测试啦 */}
+        <Route path="/Submission" component={Submission} />
       </Switch>
     </HashRouter>, target);
 

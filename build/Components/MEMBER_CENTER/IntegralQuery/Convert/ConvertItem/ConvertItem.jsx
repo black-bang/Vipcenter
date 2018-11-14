@@ -39,8 +39,15 @@ class ConvertItem extends React.PureComponent {
     super(props);
     this.state = {
       dataIntegral: "",
-      flag:'1'
+      flag:'0',
+      appear:'1'
     };
+  }
+  componentDidMount(){
+    console.log(this.props.subTitle);
+    if (this.props.subTitle == 0){
+      this.setState({ flag: '1' })
+    }
   }
     hideBtn(){
         if (this.state.flag == 1) {
@@ -48,6 +55,7 @@ class ConvertItem extends React.PureComponent {
         }else{
             this.setState({ flag: '1' })
         }
+      this.state.flag == 0;
     }
     get ComputedStyle(){
         if(this.state.flag == 1){
@@ -61,8 +69,6 @@ class ConvertItem extends React.PureComponent {
              b: { display: 'none' }
            }
         }
-    }
-  componentDidMount() {
-  }
+      }
 }
 export default ConvertItem;

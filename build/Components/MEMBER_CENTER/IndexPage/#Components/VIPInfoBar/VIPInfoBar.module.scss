@@ -2,7 +2,8 @@
 
 
 .VIPInfoBar{
-	background:#7b503d;
+	background:url('../../../../../static/Order/logo.png');
+	background-size:100% 100%; 
 }
 .VIPInfoBar-Top{
 	padding:30px 20px;
@@ -17,6 +18,7 @@
 		}
 		&>.line{
 			margin:5px 0px;
+			width: 240px;
 			border-bottom:#ccc 1px solid;
 		}
 		&>.Mobile{

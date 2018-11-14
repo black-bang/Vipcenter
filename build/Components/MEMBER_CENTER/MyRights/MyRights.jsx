@@ -111,8 +111,8 @@ class MyRights extends React.Component{
     document.title = "我的权益"
     try{
          const result = await ajax.get({
-           url: "/api/User_Account/User_IntegralListAsync",
-           data: { openId: this.query.OpenId }
+           url: "/api/User_Account/User_IntegralDetailListAsync/",
+           data: { openId: this.query["OpenId"] }
          });
          //console.log(result)
          this.setState({ TranslateList: result.PlatFormName})

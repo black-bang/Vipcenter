@@ -90,7 +90,7 @@ class ButtonPromise extends React.PureComponent {
 	};	
 }
 
-export default ButtonPromise
+export default ButtonPromise 
 
 
 {

@@ -15,87 +15,72 @@ import Input from '../../../../page/BaseIput.jsx'
 @withRouter
 @observer class CreateOrderForm extends React.Component {
   render() {
-    return (
-      <Page>
+    return <Page>
         <List className={css.List}>
-          <List.Justify icon={icons.MyMessage}>
-            <div>{"收货方式"}</div>
+          <List.Justify icon={icons.taketype}>
+            <div className={css.box}>
+              <div>{"收货方式"}</div>
+            </div>
             <div style={{ display: "flex" }}>
-              <BasePicker
-                relation='2'
-                data={[
-                    //  { value: 1, label: "快递配送" },
-                     { value: 2, label: "门店自提" }
-                ]}
-                onChange={data => {
-                  this.setState({ reciveType:data.keyvalue });
-                  sessionStorage.setItem("reciveType", data.keyvalue);             
-                }}
-              ></BasePicker>
+              <BasePicker relation="2" data={[//  { value: 1, label: "快递配送" },
+                  { value: 2, label: "门店自提" }]} onChange={data => {
+                  this.setState({ reciveType: data.keyvalue });
+                  sessionStorage.setItem("reciveType", data.keyvalue);
+                }} />
               <Icon type="right" color="#BDBAB4" size="md" />
             </div>
           </List.Justify>
-          <List.Justify icon={icons.MyMessage}>
+          <List.Justify icon={icons.arreveTime}>
             <div>{"到店时间"}</div>
             <div style={{ display: "flex" }}>
-              <SelectDate
-                relation={new Date()}
-                minDate={moment().toDate()}
-                keyname="myDate"
-                relation={this.state.SelectDate}
-                onChange={this.handleSelectDate}
-              />
+              <SelectDate relation={new Date()} minDate={moment().toDate()} keyname="myDate" relation={this.state.SelectDate} onChange={this.handleSelectDate} />
               <Icon type="right" color="#BDBAB4" size="md" />
             </div>
           </List.Justify>
-          <List.Vertical icon={icons.MyMessage} arrow={true} 
-              >
+          <List.Vertical icon={icons.shop} arrow={true}>
             <div onClick={this.SelectTranslate.bind(this)}>
               <div>{this.state.PlatFormName}</div>
               <div>{this.state.TraslateName}</div>
-           </div>
+            </div>
           </List.Vertical>
         </List>
         <List className={css.List} title={"商品列表"}>
           <List.Justify>
-            <div
-              style={{
-                width: "60px",
-                height: "60px",
-                backgroundSize: "100% 100%",
-                backgroundRepeat: "no-repeat",
-                backgroundImage: `url(${this.store.ConvertInform.get(
-                  "ImagesImageUrl"
-                )})`
-              }}
-            />
+            <div style={{ width: "60px", height: "60px", backgroundSize: "100% 100%", backgroundRepeat: "no-repeat", backgroundImage: `url(${this.store.ConvertInform.get("ImagesImageUrl")})` }} />
             <div className={css.AutoBlock}>
               <div>{this.store.ConvertInform.get("Title")}</div>
-              <div>{this.store.ConvertInform.get("AttributeDetailsName")}</div>
+              <div>
+                {this.store.ConvertInform.get("AttributeDetailsName")}
+              </div>
             </div>
             <div>
-              <div style={{ color: "#1D8C1D" }}>{this.state.PayPoints}积分</div>
-              <div style={{ color: "#1D8C1D",textAlign:'right' }}>{"X1"}</div>
+              <div style={{ color: "#1D8C1D" }}>
+                {this.state.PayPoints}
+                积分
+              </div>
+              <div style={{ color: "#1D8C1D", textAlign: "right" }}>
+                {"X1"}
+              </div>
             </div>
           </List.Justify>
         </List>
         <List className={css.List}>
-          <List.Justify icon={icons.MyMessage}>
+          <List.Justify icon={icons.card}>
             <div>{"优惠券"}</div>
             <div style={{ color: "#1D8C1D" }}>{"0张优惠券"}</div>
           </List.Justify>
-          <List.Justify icon={icons.MyMessage}>
+          <List.Justify icon={icons.money}>
             <div>{"优惠金额"}</div>
             <div style={{ color: "#1D8C1D" }}>{"￥0"}</div>
           </List.Justify>
-          <List.Justify icon={icons.MyMessage}>
+          <List.Justify icon={icons.kuaidi}>
             <div>{"配送费用"}</div>
             <div style={{ color: "#1D8C1D" }}>{"￥0"}</div>
           </List.Justify>
-          <List.Justify icon={icons.MyMessage}>
+          <List.Justify icon={icons.less}>
             <div>{"扣除积分"}</div>
             <div style={{ color: "#1D8C1D" }}>
-              {this.store.ConvertInform.get('DeductIntegral')}
+              {this.store.ConvertInform.get("DeductIntegral")}
               积分
             </div>
           </List.Justify>
@@ -106,21 +91,22 @@ import Input from '../../../../page/BaseIput.jsx'
         </List>
         <List>
           <List.Justify className={css.save}>
-            <div style={{width:'100%'}}>{"备注:"}
-            <Input ref='saveText' value={this.state.remark || ''} onChange={this.remark.bind(this)} className={css.saveText} placeholder="给商家留言,对本次订单说明~"/></div>
+            <div style={{ width: "100%" }}>
+              {"备注:"}
+              <Input ref="saveText" value={this.state.remark || ""} onChange={this.remark.bind(this)} className={css.saveText} placeholder="给商家留言,对本次订单说明~" />
+            </div>
           </List.Justify>
         </List>
         <Page.Bottom>
           <div className={css.Bottom}>
             <div className={css.PayNumber}>
               <span>{"实付款:"}</span>
-              <span style={{ color: "#FF5050" }}>{this.state.PayPoints}</span>
+              <span style={{ color: "#FF5050" }}>
+                {this.state.PayPoints}
+              </span>
               <span style={{ color: "#FF5050" }}>{"积分"}</span>
             </div>
-            <ButtonPromise className={css.submit} 
-            onClick={this.AddPayOrder.bind(this)} 
-            theme={ButtonPromise.style.typeSave()}
-          >
+            <ButtonPromise className={css.submit} onClick={this.AddPayOrder.bind(this)} theme={ButtonPromise.style.typeSave()}>
               {"提交订单"}
             </ButtonPromise>
             {/* <ButtonPromise className={css.submit} disable={true} > 
@@ -130,8 +116,7 @@ import Input from '../../../../page/BaseIput.jsx'
             </ButtonPromise> */}
           </div>
         </Page.Bottom>
-      </Page>
-    );
+      </Page>;
   }
   constructor(props) {
     super(props);
@@ -212,7 +197,7 @@ import Input from '../../../../page/BaseIput.jsx'
     let obj = Object.assign({}, this.state);
     this.setState({ ...obj });;
     if (!obj.SelectDate){
-      Toast.info("到店时间未选择",.6)
+      Toast.info("请选择到店时间",.8)
     }
     try {
           const result = await ajax.post({
@@ -239,7 +224,7 @@ import Input from '../../../../page/BaseIput.jsx'
           sessionStorage.removeItem('remark')
           sessionStorage.removeItem('reciveTime')
           sessionStorage.setItem('reciveTime', this.state.SelectDate)
-         this.props.history.push("/PaymentProcessRouter/PaymentOrderFormRouter/PaymentOrderForm?ProductId="
+         this.props.history.replace("/PaymentProcessRouter/PaymentOrderFormRouter/PaymentOrderForm?ProductId="
           + this.query["ProductId"] + 
           "&OrderNo=" + 
           result.orderNo + 

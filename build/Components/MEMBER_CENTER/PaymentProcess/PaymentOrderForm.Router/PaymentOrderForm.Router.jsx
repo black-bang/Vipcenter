@@ -17,7 +17,7 @@ import storage from '../../IndexPage/#Api/storage.js'
 	render(){
 		return (
 		<Page>
-			<List className="List">
+			<List className="payList">
 				<List.Justify>
 						<div>{"积分:"} 
 							<span style={{ marginLeft: '10px', color: "#1D8C1D" }}>
@@ -33,7 +33,7 @@ import storage from '../../IndexPage/#Api/storage.js'
 				</List.Justify>
 			</List>
 				<List className="" title={"支付方式"}>
-					<List.Justify icon={icons.MyMessage} >
+					<List.Justify icon={icons.less} >
 						<div>积分支付(剩余积分:{this.state.naturlOrderNumber || '0'}分)</div>
 						<div><Icon type='check-circle' color="#03C235" /> </div>
 				</List.Justify >
@@ -64,6 +64,7 @@ import storage from '../../IndexPage/#Api/storage.js'
 		}
 	}
 	async payOrderBtn() {
+		
 		try{
 			const result = await ajax.post({
 				url:'/api/Order/GoToPayAsync',
@@ -82,6 +83,7 @@ import storage from '../../IndexPage/#Api/storage.js'
 				)
 			      sessionStorage.removeItem('reciveTime')
 		}catch(error){
+			Toast.info("服务器开小差了,请稍后重试");
 			throw error
 		}
 	}
@@ -90,7 +92,7 @@ import storage from '../../IndexPage/#Api/storage.js'
 		try {
 			const willresult = await this.store.getPaymentOrderFormList();
 			const result = await ajax.get({
-				url: "/api/User_Account/User_IntegralListAsync",
+				url: "/api/User_Account/User_IntegralDetailListAsync",
 				data: { openId: localStorage.openId }
 			});
 			console.log(result);

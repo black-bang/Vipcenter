@@ -12,7 +12,7 @@ export default class PointsConvertState {
 		try{
 			yield this.ScrollViewState.loadInitData({
 				url:"/api/Good_Product/ListAsync",
-				data: { AppId: "wx63b76c1236c32ea6", sort: "CreateTime desc", openId: this.query['OpenId']}
+				data: { AppId: this.query['AppId'], sort: "CreateTime desc", openId: this.query['OpenId']}
 			})
 			console.log(this.ScrollViewState);
 		}catch(error){

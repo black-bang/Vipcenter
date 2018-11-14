@@ -13,7 +13,7 @@ export default class ApplicationStoreState {
     try {
      yield this.ScrollViewState.loadInitData({
         url: "/api/User_Account/GetTraslateListAsync/",
-        data: { accountId: this.query["AccountId"] }
+       data: { accountId: this.query["AccountId"], openId:this.query['OpenId'] }
       });
     } catch (error) {
       throw error;

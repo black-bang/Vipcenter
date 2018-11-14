@@ -14,7 +14,7 @@ export default class ConvertState {
         try {
             yield this.ScrollViewState.loadInitData({
                 url: "/api/User_Account/User_IntegralsListAsync/",
-                data: { accountId: this.query["AccountId"]}
+                data: { accountId: this.query["AccountId"], openId: this.query['OpenId']}
             });
         } catch (error) {
             throw error;

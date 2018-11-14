@@ -20,7 +20,6 @@ class PaymentOrderForm extends React.Component {
         <TopBar>
           <TopBar.Middle>{"下单结果"}</TopBar.Middle>
         </TopBar>
-
 		<ScrollView store={this.store.ScrollViewState} className="ScrollView">
 			<List>
 			<List.Vertical className="successTop">
@@ -36,12 +35,12 @@ class PaymentOrderForm extends React.Component {
 			</List>
 			<List>
 			<List.Justify className="ListBtn">
-				<NavLink  to={this.toOrderList} className="C_Btn">
+				<a onClick={this.OrderList.bind(this)} className="C_Btn">
 				{"返回商城"}
-				</NavLink>
-				<NavLink to={this.toCreateOrderForm} className="V_Btn">
+				</a>
+				<a  onClick={this.CreateOrderForm.bind(this)} className="V_Btn">
 				{"查看订单"}
-				</NavLink>
+				</a>
 			</List.Justify>
 			</List>
 			<List>
@@ -70,23 +69,11 @@ class PaymentOrderForm extends React.Component {
 			DeductIntergral:'',
 		}
 	}
-	get toOrderList() {
-		return url.format({
-		
-			pathname: "/PointsConvert",
-			query: {
-				OpenId:this.query["OpenId"],
-				AccountId :storage.VipInfo['AccountId']
-			}
-		});
+ OrderList() {
+	 this.props.history.replace("/PointsConvert?AccountId="+storage.VipInfo["AccountId"]+"&OpenId="+this.query["OpenId"]);
 	}
-  get toCreateOrderForm() {
-    return url.format({
-			pathname: "/ConvertListRouter/ConvertList/ConvertListItemFormRouter",
-			query: { ProductId: this.query["ProductId"],
-							 AccountId:storage.VipInfo.AccountId,
-		}
-    });
+CreateOrderForm() {
+	this.props.history.replace('/ConvertListRouter/ConvertList/ConvertListItemFormRouter?ProductId='+this.query["ProductId"] +'&AccountId=' + storage.VipInfo['AccountId'])
   }
   async componentDidMount() {
 	document.title = "下单结果";

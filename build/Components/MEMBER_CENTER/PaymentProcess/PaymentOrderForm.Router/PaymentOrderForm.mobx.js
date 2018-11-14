@@ -11,7 +11,7 @@ export default class PaymentOrderFormState {
 		try {
 			const result = yield ajax.get({
 				url: "/api/Order/GetOrderPayInfoAsync",
-				data: { OrderNo: this.query["OrderNo"] }
+				data: { OrderNo: this.query["OrderNo"], openId: this.query["OpenId"] }
 			})
 			
 			this.PayOrderform = observable.map(result);

@@ -43,9 +43,7 @@ class Points extends React.Component{
                         </div>
                     </div>
             </div>
-        )
-
-       
+        )   
     }
     constructor(props) {
         super(props)
@@ -62,8 +60,8 @@ class Points extends React.Component{
         document.title="积分查询"
         try{
             const result = await ajax.get({
-                url:"/api/User_Account/User_IntegralListAsync/" ,
-                data: { openId: this.query.OpenId}  
+                url:"/api/User_Account/User_IntegralDetailListAsync" ,
+                data: { openId: this.query['OpenId']}  
             })
            // console.log(result)
             this.setState({ pointsNumber: result.Effectiveintegral})
@@ -72,8 +70,8 @@ class Points extends React.Component{
         }
         try {
             const result = await ajax.get({
-              url: "/api/Wx_Good_Catalog_Score/ListAsync/",
-              data: { wx_SeetingId: "1" }
+                url: "/api/Wx_Good_Catalog_Score/ListAsync",
+              data: { wx_SeetingId: this.query['SeetingId'],openId: this.query["OpenId"] }
             });
             this.setState({dataTable:result})
         } catch (error) {

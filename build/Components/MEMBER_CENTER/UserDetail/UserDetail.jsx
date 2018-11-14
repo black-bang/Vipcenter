@@ -9,6 +9,7 @@ import url from "url"
 import storage from '../IndexPage/#Api/storage.js'
 import { Toast } from 'antd-mobile'
 
+
 //与CustomerCenter共用数
 @inject((stores)=>(stores))
 @observer class UserDetail extends React.Component {

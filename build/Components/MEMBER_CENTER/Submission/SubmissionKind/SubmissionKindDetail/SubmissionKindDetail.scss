@@ -1,0 +1,122 @@
+.AddBox{
+  background: #fff;
+}
+.Text {
+  border-color: #fff !important;
+  display: flex;
+  height: 55px;
+  padding: 5px 20px;
+  line-height: 45px;
+  background: #fff;
+  .Texted {
+    border: none;
+    width: 90%;
+    height: 100%;
+    padding-left: 5px;
+  }
+}
+.Store{
+  border-color: #fff !important;
+  display: flex;
+  justify-content: space-between;
+  height: 55px;
+  padding: 5px 20px;
+  line-height: 45px;
+  background: #fff;
+}
+.PicList{
+    width: 100%;
+    height: 100px;
+    overflow: auto;
+    padding: 15px;
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    .ListItemWrap{
+        	width:25%;
+    .ListItem{
+        position:relative;
+        width: 60px;
+        height: 60px;
+        margin: 5px auto;
+        border: 1px solid #eee;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+    }
+  }
+}
+.InfoBox{
+  width: 100%;
+  height: 25%;
+    background: #fff;
+}
+.TipInfom{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   flex-direction:column;
+.ErrText{
+    width: 90%;
+    margin: 0 5%;
+    padding-top: 30px;
+    height: 60px;
+    font-size: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FF0000;
+    p{
+        margin-left: 10px;
+    }
+}
+.ErrOrder{
+      width: 70%;
+      font-size: 21px;
+      color: #FF0000;
+      margin-left: 75px;
+}
+.SucceessText{
+      width: 90%;
+      margin: 0 5%;
+      padding-top: 30px;
+      height: 60px;
+      font-size: 21px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #0BC646;
+    
+        p{
+            margin-left: 10px;
+        }
+    }
+      .SuccessOrder{
+        width: 70%;
+        margin: 0 15%;
+        font-size: 21px;
+        text-align: center;
+        color: #0BC646;
+
+            }
+}
+.DateilBtn{
+  position: absolute;
+  bottom: 5%;
+  width: 90%;
+  margin: 0 5%;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 16px;
+  &>div{
+    width: 100%;
+    height: 100%;
+    border-radius:none; 
+    
+  }
+}

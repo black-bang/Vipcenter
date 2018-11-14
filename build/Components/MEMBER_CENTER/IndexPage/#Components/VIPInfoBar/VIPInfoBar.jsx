@@ -21,11 +21,13 @@ export default class VIPInfoBar extends React.Component {
     return (
       <div className={style["VIPInfoBar"]}>
         <div className={style["VIPInfoBar-Top"]}>
-          <Photo size={75} src={Picture} />
+          <div onClick={this.toMyRights.bind(this)}>
+            <Photo size={75} src={Picture} />
+          </div>
           <div className={style["VIPMessage"]}>
             <div className={style["Name"]}>{Name}</div>
-            <div className={style["line"]} />
-            <div className={style["Mobile"]}>{VipNumber}</div>
+            <div className={style["line"]} style={{width:'140px'}} />
+            <div className={style["Mobile"]}>NO:{VipNumber}</div>
           </div>
         </div>
         <div className={style["VIPInfoBar-Bottom"]}>
@@ -44,10 +46,13 @@ export default class VIPInfoBar extends React.Component {
 async componentDidMount(){
   //window.addEventListener('touchmove', function (event) { event.preventDefault(); }, false)
 }
+  toMyRights(){
+    this.props.history.push("./MyRights?AccountId=" + storage.VipInfo.AccountId + "&OpenId=" + localStorage.openId);
+  }
   toLevel() {
 	  this.props.history.push("./MyRights?AccountId=" + storage.VipInfo.AccountId + "&OpenId=" + localStorage.openId);
   }
   tomyPoints(){
-	  this.props.history.push("./Points?AccountId=" + storage.VipInfo.AccountId+"&OpenId=" + localStorage.openId);
+    this.props.history.push('./Points?AccountId=' + storage.VipInfo['AccountId'] + "&OpenId=" + localStorage.openId + '&SeetingId=' + localStorage.SeetingId)
   }
 }

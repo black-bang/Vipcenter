@@ -2,7 +2,10 @@ import css from "./CommodityCard.module.scss"
 import {NavLink} from "react-router-dom"
 import url from "url"
 import storage from '../../../IndexPage/#Api/storage.js'
+import { withRouter } from 'react-router'
+import { Toast } from "antd-mobile";
 
+@withRouter
 export default class CommodityCard extends React.PureComponent {
 
 	render(){
@@ -22,8 +25,8 @@ export default class CommodityCard extends React.PureComponent {
 			GroundFig
 		}=this.props
 		return (
-			<NavLink style={this.ComputedStyle.a} className={css["CommodityCard-Shell"]} to={this.toCreateOrderForm}>
-			<div style={this.ComputedStyle.b} className={css["already-down"]}>{this.state.flag}</div>
+			<a style={this.ComputedStyle.a} className={css["CommodityCard-Shell"]} onClick={this.CreateOrderForm.bind(this)}>
+			{/* <div style={this.ComputedStyle.b} className={css["already-down"]}>{this.state.flag}</div> */}
 			<div className={css["CommodityCard"]}>
 					<div className={css["Picture"]} style={{ backgroundImage: `url(${ImagesImageUrl})`}}/>
 				<div className={css["Text"]}>
@@ -36,23 +39,26 @@ export default class CommodityCard extends React.PureComponent {
 				</div>
 				<div className={css["Point"]}>
 					<div className={css["Points"]}>
-						<span style={{color:"#FF7070",fontWeight:"bold",fontSize:'18px'}}>
+						<span style={{color:"#FF7070",fontWeight:"bold",fontSize:'15px'}}>
 							{Math.abs(DeductIntegral)}
 						</span>
 						<span>{"积分"}</span>
 					</div>
-					<div style={{color:"#999999",textDecoration:"line-through",marginRight:'3px'}}>
-						<span>{"￥"}</span>
-						<span style={{color:"#aaa",fontWeight:"bold"}}>
-							{Price}
-						</span>
-					</div>
-					<div className={css["Point-Bolck"]} style={this.ComputedStyle.c}>
-						{"预约"}
+						<div className={css["Point-right"]}>
+							<div style={{ color: "#999999", textDecoration: "line-through", marginRight: '3px',height:'28px',lineHeight:'28px' }}>
+								<span>{"￥"}</span>
+								<span style={{ color: "#aaa", fontWeight: "bold", fontSize: '12px' }}>
+									{Price}
+								</span>
+							</div>
+							<div className={css["Point-Bolck"]} style={this.ComputedStyle.c}>
+								{"预约"}
+							</div>
+						
 					</div>
 				</div>	
 			</div>				
-		</NavLink>
+		</a>
 	)}
 	constructor(props){
 		super(props)
@@ -87,9 +93,9 @@ export default class CommodityCard extends React.PureComponent {
 			}
 		}
 		if (this.props.GroundFig == 2) {
-			this.setState({ flag: '已过期' })
+			//this.setState({ flag: '已过期' })
 			return {
-				a: { pointerEvents: "none", display: 'block' },
+				a: { pointerEvents: "true", display: 'block' },
 				b: { display: "block" }
 			}
 		}
@@ -98,10 +104,19 @@ export default class CommodityCard extends React.PureComponent {
 	}
 	async componentDidMount(){
 	}
-	get toCreateOrderForm(){
-		return url.format({
-			pathname: '/PaymentProcessRouter/CreateOrderFormRouter/CreateOrderForm',
-			query: { ProductId: this.props.ProductId, AttributeDetailsId: this.props.AttributeDetailsId, AccountId: storage.VipInfo.AccountId}
-		})
+	CreateOrderForm(){
+		if (this.props.GroundFig == 2){
+			Toast.info('不能兑换',.8)
+		}else{
+			this.props.history.push("/PaymentProcessRouter/CreateOrderFormRouter/CreateOrderForm?ProductId=" + this.props.ProductId +
+				'&AttributeDetailsId=' + this.props.AttributeDetailsId +
+				'&AccountId=' + storage.VipInfo.AccountId
+			);
+		}
+		
+		// return url.format({
+		// 	pathname: '/PaymentProcessRouter/CreateOrderFormRouter/CreateOrderForm',
+		// 	query: { ProductId: this.props.ProductId, AttributeDetailsId: this.props.AttributeDetailsId, AccountId: storage.VipInfo.AccountId}
+		// })
 	}
 }

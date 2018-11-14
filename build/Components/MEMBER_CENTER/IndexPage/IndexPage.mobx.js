@@ -3,14 +3,14 @@ import storage from "./#Api/storage.js"
 import {ajax} from "api"
 
 export default class IndexPageState {
-	constructor(queryOBJ){
-		this.queryOBJ=queryOBJ
+	constructor(query){
+		this.query = query;
 	}
 	getUserIntegral=flow(function*(){
 		try{
 			const result=yield ajax.get({
-				url:"/api/User_Account/User_IntegralListAsync",
-				data:{openId:this.queryOBJ["openId"]}
+				url:"/api/User_Account/User_IntegralDetailListAsync/",
+				data:{openId:this.query["openId"]}
 			})
 			storage.setVipInfo(result)
 			return result

@@ -1,0 +1,29 @@
+.Btn{
+    width: 90%;
+    height: 60px;
+    margin: 0 5%;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    background: #fff;
+    text-align: center;
+    line-height: 60px;
+    font-size: 16px;
+}
+.cancel{
+    background: #1AAE15;
+    color: #fff;
+}
+.topText{
+    width: 90%;
+    margin: 0 5%;
+    margin-top: 15%;
+    height: 60px;
+    font-size: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1AAE15;
+    p{
+        margin-left: 10px;
+    }
+}

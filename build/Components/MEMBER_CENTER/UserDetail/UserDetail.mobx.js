@@ -72,7 +72,7 @@ class UserDetailState {
 		try{
 			const result=yield ajax.post({
 				url:"/api/User_Account/UpdateVipCustomerInfoAsync",
-				data: Object.assign(newOBJ,{ accountId: this.queryOBJ['AccountId']})
+				data: Object.assign(newOBJ, { accountId: this.queryOBJ['AccountId'], openId: this.queryOBJ["OpenId"]})
 			})
 		}catch(error){
 			throw error

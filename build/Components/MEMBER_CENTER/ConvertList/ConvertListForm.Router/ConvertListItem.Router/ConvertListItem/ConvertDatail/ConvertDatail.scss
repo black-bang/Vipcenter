@@ -13,12 +13,12 @@
       margin: 0 5%;
       //background: #f5f5f5;
       background-size: 100% 100%;
+    
       .storeinform {
         @include rect(90%, 0.52rem);
         margin: 0 5%;
         margin-top: 0.15rem;
        // background: #f5f5f5;
-    
         overflow: hidden;
         border-bottom: 1px solid #879298;
         @include flexbox();
@@ -40,12 +40,14 @@
           color: #3F3F3F;
           font-size: 0.16rem;
         }
+     
       }
     //   卡券详情
       .card_inform {
         @include rect(90%, 0.95rem);
         margin: 0 5%;
         padding-bottom: 0.15rem;
+        position: relative;
         //border-bottom: 1px dashed #333;
         .top {
           @include rect(100%, 0.6rem);
@@ -96,6 +98,22 @@
                  font-size: 0.14rem;
             }
         }  
+          .cardStates{
+          position: relative;
+          width: 100%;
+          height: 60px;
+         span{
+           display: block;
+           width: 60px;
+           height: 60px;
+           position: absolute;
+           right: 0;
+           img{
+             width: 100%;
+             height: 100%;
+           }
+         }
+        }
     }
 // 卡券二维码
 .card_pic{
