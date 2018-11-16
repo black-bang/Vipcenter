@@ -71,7 +71,7 @@ class Points extends React.Component{
         try {
             const result = await ajax.get({
                 url: "/api/Wx_Good_Catalog_Score/ListAsync",
-              data: { wx_SeetingId: this.query['SeetingId'],openId: this.query["OpenId"] }
+                data: { wx_SeetingId: sessionStorage.getItem('SeetingId'),openId: this.query["OpenId"] }
             });
             this.setState({dataTable:result})
         } catch (error) {

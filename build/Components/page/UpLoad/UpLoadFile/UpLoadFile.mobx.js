@@ -46,7 +46,7 @@ export default class UpLoadFileState {
 	upLoad(path){
 		//执行上传
 		const formData=new FormData();
-		formData.append("path",path||`ProductImage/plantFrom${1}/${999}`)
+		formData.append("path", path || `ProductImage/plantFrom${1}/${999}`)
 		this.FILES.map((fileOBJ,index)=>{
 			formData.append(`file${index}`,fileOBJ["file"])
 		})

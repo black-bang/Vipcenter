@@ -10,7 +10,7 @@ import storage from "./#Api/storage.js"
 import url from "url"
 import { ajax } from 'api'
 import { Modal, Toast, WhiteSpace, WingBlank, Button } from "antd-mobile";
-// import getPosition from "../locations.js";
+import getPosition from "../locations.js";
 
 const alert = Modal.alert;
 
@@ -76,8 +76,6 @@ class IndexPage extends React.Component {
   async componentDidMount() {
     document.title = "会员中心";
 
-    localStorage.setItem("openId", this.query["openId"]);
-    localStorage.setItem("SeetingId", this.query["SeetingId"]);
     try {
       const result = await this.store.getUserIntegral();
       this.forceUpdate();
@@ -85,7 +83,7 @@ class IndexPage extends React.Component {
       if (result == "请激活会员卡") {
         // this.props.history.replace("/AddUserVIP?openId=" + this.query.openId);
         window.location.replace(
-          `http://submodel.jzker.cn/ActiveVipCard/#/?OpenId=${
+          `http://submodel.jzker.cn/ActiveVipCard/#/?openId=${
             this.query["openId"]
           }`
         );
@@ -103,6 +101,10 @@ class IndexPage extends React.Component {
         data: { accountId: storage.VipInfo["AccountId"] }
       });
       storage.setApplicationStoreInfo(result);
+      sessionStorage.setItem("SeetingId", this.query["SeetingId"]);
+      sessionStorage.setItem('AppId', this.query['AppId'])
+      sessionStorage.setItem("openId", this.query["openId"]);
+      localStorage.setItem("openId", this.query["openId"]);
       //console.log(result)
       //console.log(storage.ApplicationStoreInfo);
       this.setState({ data: result });
@@ -144,9 +146,7 @@ class IndexPage extends React.Component {
           "/PointsConvert?AccountId=" +
           storage.VipInfo["AccountId"] +
           "&OpenId=" +
-          this.query["openId"] +
-          "&AppId=" +
-          this.query["AppId"]
+          this.query["openId"] 
       },
       {
         text: "兑换记录",

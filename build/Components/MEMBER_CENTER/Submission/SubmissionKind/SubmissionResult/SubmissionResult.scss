@@ -1,22 +1,29 @@
+
+.BtnBox{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom:60px;
+}
 .Btn{
     width: 90%;
     height: 60px;
     margin: 0 5%;
     border-radius: 5px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     background: #fff;
     text-align: center;
     line-height: 60px;
     font-size: 16px;
 }
-.cancel{
+.Contued{
     background: #1AAE15;
     color: #fff;
 }
 .topText{
     width: 90%;
     margin: 0 5%;
-    margin-top: 15%;
+    margin-top: 30px;
     height: 60px;
     font-size: 21px;
     display: flex;

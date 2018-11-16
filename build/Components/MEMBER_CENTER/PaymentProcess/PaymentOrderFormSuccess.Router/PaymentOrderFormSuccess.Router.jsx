@@ -73,11 +73,13 @@ class PaymentOrderForm extends React.Component {
 	 this.props.history.replace("/PointsConvert?AccountId="+storage.VipInfo["AccountId"]+"&OpenId="+this.query["OpenId"]);
 	}
 CreateOrderForm() {
-	this.props.history.replace('/ConvertListRouter/ConvertList/ConvertListItemFormRouter?ProductId='+this.query["ProductId"] +'&AccountId=' + storage.VipInfo['AccountId'])
+	this.props.history.replace('/ConvertListRouter/ConvertList/ConvertListItemFormRouter?ProductId='
+	+this.query["ProductId"] +
+	'&AccountId=' + storage.VipInfo['AccountId']
+	)
   }
   async componentDidMount() {
 	document.title = "下单结果";
-		console.log(storage.VipInfo.AccounId);
 		let number = Math.abs(this.query["DeductIntergral"]);
     this.setState({ DeductIntergral: number });
 	  try {

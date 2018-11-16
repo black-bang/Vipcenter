@@ -51,7 +51,7 @@ export default class AddSubmissionState {
                     data: Object.assign({ 
                         openId: this.query['OpenId'],
                         user_AccountId: this.query['AccountId'],
-                        wx_SeetingId: '1'
+                        wx_SeetingId: sessionStorage.getItem('SeetingId')
                     },this.Form)
                 })
                 console.log(Object)
@@ -69,7 +69,7 @@ export default class AddSubmissionState {
         try{
             const result = yield ajax.get({
                 url: "/api/Wx_Good_Catalog_Score/SelectWx_Good_Catalog_ScoreLIstAsync",
-                data: { wx_SeetingId: localStorage.getItem('SeetingId')}
+                data: { wx_SeetingId: sessionStorage.getItem('SeetingId')}
             })
             this.courentType= result.data
            // console.log(result);

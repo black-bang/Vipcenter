@@ -1,58 +1,120 @@
+import { Modal, Button, WhiteSpace, WingBlank, Toast } from "antd-mobile";
 
-import { Toast, WhiteSpace, WingBlank, Button } from "antd-mobile";
-const getPosition = (
-  timeout = 10000,
-  maximumAge = 20000,
-  enableHighAcuracy = false
-) =>
-  new Promise((resolve, reject) => {
-    if (!navigator && !navigator.geolocation) {
-      return reject(new Error("geolocation api not supported"));
-    }
+const alert = Modal.alert;
+// function getPosition() {
 
-    const success = loc => {
-      const location = {
-        latitude: loc.coords.latitude, // 纬度
-        longitude: loc.coords.longitude, // 经度
-        accuracy: loc.coords.accuracy // 精确度
-      };
-      resolve(location);
+  //判断浏览器是否支持HTML5 定位
+//   if (window.navigator.geolocation) {
+//     const maximumAge =600000 
+//     navigator.geolocation.getCurrentPosition(
+//       successfulCallback,
+//       failCallback,
+//       {
+//         maximumAge
+//       }
+//     );
 
-        alert('维度'+loc.coords.latitude+'经度'+loc.coords.longitude)
-      sessionStorage.setItem('latitude', loc.coords.latitude)
-      sessionStorage.setItem('longitude', loc.coords.longitude);
-    };
+//   } else {
+//     alert("你的浏览器不能使用HTML5定位")
 
-    const error = () => reject("出错了");
-
-    navigator.geolocation.getCurrentPosition(success, error, {
-        maximumAge,
-        enableHighAcuracy, // 指示浏览器获取高精度的位置，默认为false
-        timeout, // 指定获取地理位置的超时时间，默认不限时，单位为毫秒
-     // 最长有效期，在重复获取地理位置时，此参数指定多久再次获取位置。
-    });
-  });
-
-// 使用示例
-getPosition()
-  .then(pos => pos)
-  .catch(err => console.log(err));
-
-// const getPosition =(
-//   window.onload = function () {
-//     if (navigator.geolocation) {
-//       navigator.geolocation.getCurrentPosition(
-//         function (position) {
-//           latitude = position.coords.latitude;//获取纬度
-//           longitude = position.coords.longitude;//获取经度
-//           alert("维度" + position.coords.latitude + "经度" + position.coords.longitude);
-//         });
-     
-//     } else {
-//       alert("不支持定位功能");
-//     }
 //   }
-// )
 
+// }
+// function successfulCallback(position) {
+//   let longitude = position.coords.longitude;
+//   let latitude = position.coords.latitude;
+//   alert('获取位置信息成功', '经度' + position.coords.longitude + '维度' + position.coords.latitude);
+ 
 
+// }
+
+// function failCallback(error) {
+// alert(error.code)
+//   var text;
+
+//   switch (error.code) {
+//     case error.PERMISSION_DENIED:
+//       text = "用户拒绝对获取地理位置的请求。";
+//       break;
+//     case error.POSITION_UNAVAILABLE:
+//       text = "位置信息是不可用的。";
+//       alert("位置信息是不可用的。");
+//       break;
+//     case error.TIMEOUT:
+//       text = "请求用户地理位置超时。";
+//       break;
+//     case error.UNKNOWN_ERROR:
+//       text = "未知错误。";
+//       break;
+//   }
+// }
+// getPosition();
+
+function getPosition(){
+  if (window.navigator.geolocation) {
+   if(sessionStorage.getItem('lat')){
+     return false
+   }else{
+     navigator.geolocation.getCurrentPosition(successCallback,
+       errorCallback,
+       { maximumAge: 60000, timeout: 1000 });
+   }
+  }else{
+    alert('您的浏览器不支持定位功能')
+  }
+  function successCallback(position) {
+    let longitude = position.coords.longitude;
+    let latitude = position.coords.latitude;
+    sessionStorage.setItem('lat', longitude)
+    sessionStorage.setItem("ing", latitude);
+   // alert('获取位置信息成功', '经度' + position.coords.longitude + '维度' + position.coords.latitude);
+
+  }
+  // function successCallback(position) {
+  //   let lat = position.coords.latitude;
+  //   let lng = position.coords.longitude;
+  //   alert(this);
+  //   const pointBak = new BMap.Point(lng, lat);
+
+  //   const convertor = new BMap.Convertor();
+  //   convertor.translate([pointBak], 1, 5, function (resPoint) {
+  //     if (resPoint && resPoint.points && resPoint.points.length > 0) {
+  //       lng = resPoint.points[0].lng;
+  //       lat = resPoint.points[0].lat;
+  //     }
+  //     const point = new BMap.Point(lng, lat);
+  //     const geo = new BMap.Geocoder();
+  //     geo.getLocation(point, (res) => {
+  //         alert(res)
+  //     });
+  //   });
+  // };
+
+  function errorCallback(error) {
+    let text;
+    //alert(error.TIMEOUT);
+    switch (error.code) {
+      case error.TIMEOUT:
+        doFallback();
+        navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+        throw "获取地址超时, 请刷新重试"
+        break;
+      case error.PERMISSION_DENIED:
+        text = "用户拒绝对获取地理位置的请求。";
+        throw"用户拒对获取地理位置的请求";
+        break;
+      case error.POSITION_UNAVAILABLE:
+        text = "位置信息是不可用的。";
+        throw '位置信息是不可用的';
+        break;
+      case error.UNKNOWN_ERROR:
+        text = "未知错误。";
+        throw "未知错误";
+        break;
+    };
+  }
+  function doFallback() {
+  }
+  }
+getPosition() 
 export default getPosition;

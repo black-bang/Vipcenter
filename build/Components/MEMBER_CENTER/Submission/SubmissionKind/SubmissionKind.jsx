@@ -92,37 +92,28 @@ class SubmissionKind extends React.Component {
     this.store = new SubmissionKindState(this.query);
   }
  async onTab(){
-   if (this.store.ScrollViewState3.dataList.length == 0) {
-     this.refs.hidePic3.style.display = 'block '
-   }
    if (this.store.ScrollViewState1.dataList.length == 0) {
      this.refs.hidePic1.style.display = 'block'
    }
    if (this.store.ScrollViewState2.dataList.length == 0) {
      this.refs.hidePic2.style.display = 'block'
    }
+
+   if (this.store.ScrollViewState3.dataList.length == 0) {
+     this.refs.hidePic3.style.display = 'block '
+   }
   }
   async componentDidMount(){
      document.title ='我的凭证'
     try{
-  setTimeout(()=>{
-    if (this.store.ScrollViewState1.dataList.length == 0) {
-      this.refs.hidePic1.style.display = "block";
-    }
-    if (this.store.ScrollViewState2.dataList.length == 0) {
-      this.refs.hidePic2.style.display = 'block'
-    }
-  },750)
-         const result = await this.store.getSubmissionKindList()
-         const result_1 = await this.store.getSubmissionKindList_1()
-         const result_2 = await this.store.getSubmissionKindList_2()
-      if (this.store.ScrollViewState1.dataList.length > 0) {
-        this.refs.hidePic1.style.display = 'none'
-      }
-      if (this.store.ScrollViewState2.dataList.length > 0) {
-        this.refs.hidePic2.style.display = 'none'
-      }
+      this.refs.hidePic1.style.display = 'none'
+      this.refs.hidePic2.style.display = 'none'
+      const result = await this.store.getSubmissionKindList()
+      const result_1 = await this.store.getSubmissionKindList_1()
+      const result_2 = await this.store.getSubmissionKindList_2()
+
     }catch(error){
+      this.refs.hidePic1.style.display = "block";
       throw error
     }
   }

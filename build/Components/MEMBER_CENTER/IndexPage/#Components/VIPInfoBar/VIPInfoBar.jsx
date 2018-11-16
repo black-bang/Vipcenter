@@ -47,12 +47,12 @@ async componentDidMount(){
   //window.addEventListener('touchmove', function (event) { event.preventDefault(); }, false)
 }
   toMyRights(){
-    this.props.history.push("./MyRights?AccountId=" + storage.VipInfo.AccountId + "&OpenId=" + localStorage.openId);
+    this.props.history.push("./MyRights?AccountId=" + storage.VipInfo.AccountId + "&OpenId=" + sessionStorage.openId);
   }
   toLevel() {
-	  this.props.history.push("./MyRights?AccountId=" + storage.VipInfo.AccountId + "&OpenId=" + localStorage.openId);
+	  this.props.history.push("./MyRights?AccountId=" + storage.VipInfo.AccountId + "&OpenId=" + sessionStorage.openId);
   }
   tomyPoints(){
-    this.props.history.push('./Points?AccountId=' + storage.VipInfo['AccountId'] + "&OpenId=" + localStorage.openId + '&SeetingId=' + localStorage.SeetingId)
+    this.props.history.push('./Points?AccountId=' + storage.VipInfo['AccountId'] + "&OpenId=" + sessionStorage.openId + '&SeetingId=' + sessionStorage.SeetingId)
   }
 }

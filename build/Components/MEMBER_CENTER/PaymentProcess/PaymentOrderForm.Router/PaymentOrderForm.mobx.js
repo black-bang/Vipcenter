@@ -15,7 +15,7 @@ export default class PaymentOrderFormState {
 			})
 			
 			this.PayOrderform = observable.map(result);
-			console.log(result);
+			//console.log(result);
 			return result
 		} catch (error) {
 			throw error

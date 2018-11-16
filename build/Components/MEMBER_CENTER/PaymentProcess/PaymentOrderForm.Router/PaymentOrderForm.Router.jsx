@@ -93,9 +93,9 @@ import storage from '../../IndexPage/#Api/storage.js'
 			const willresult = await this.store.getPaymentOrderFormList();
 			const result = await ajax.get({
 				url: "/api/User_Account/User_IntegralDetailListAsync",
-				data: { openId: localStorage.openId }
+				data: { openId: sessionStorage.getItem('openId')  }
 			});
-			console.log(result);
+		//	console.log(result);
 			this.setState({data:result})
 			this.setState({ naturlOrderNumber: result.Effectiveintegral})
 			let payOrderNumber = Math.abs(this.store.PayOrderform.get("DeductIntergral"));

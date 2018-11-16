@@ -1424,114 +1424,7 @@ module.exports = {"Page_top_comp":"Page_top_comp-35n6QQhkJroW9ybq51B0Kg","PageTo
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 36 */,
-/* 37 */,
-/* 38 */,
-/* 39 */,
-/* 40 */,
-/* 41 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _extends2 = __webpack_require__(15);
-
-var _extends3 = _interopRequireDefault(_extends2);
-
-var _classCallCheck2 = __webpack_require__(10);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(11);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = __webpack_require__(12);
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = __webpack_require__(13);
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _classnames = __webpack_require__(17);
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
-var _react = __webpack_require__(2);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _loadSprite = __webpack_require__(725);
-
-var _loadSprite2 = _interopRequireDefault(_loadSprite);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var __rest = undefined && undefined.__rest || function (s, e) {
-    var t = {};
-    for (var p in s) {
-        if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
-    }if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-        if (e.indexOf(p[i]) < 0) t[p[i]] = s[p[i]];
-    }return t;
-};
-
-var Icon = function (_React$Component) {
-    (0, _inherits3['default'])(Icon, _React$Component);
-
-    function Icon() {
-        (0, _classCallCheck3['default'])(this, Icon);
-        return (0, _possibleConstructorReturn3['default'])(this, (Icon.__proto__ || Object.getPrototypeOf(Icon)).apply(this, arguments));
-    }
-
-    (0, _createClass3['default'])(Icon, [{
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            (0, _loadSprite2['default'])();
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            var _a = this.props,
-                type = _a.type,
-                className = _a.className,
-                size = _a.size,
-                restProps = __rest(_a, ["type", "className", "size"]);
-            var cls = (0, _classnames2['default'])(className, 'am-icon', 'am-icon-' + type, 'am-icon-' + size);
-            return _react2['default'].createElement(
-                'svg',
-                (0, _extends3['default'])({ className: cls }, restProps),
-                _react2['default'].createElement('use', { xlinkHref: '#' + type })
-            );
-        }
-    }]);
-    return Icon;
-}(_react2['default'].Component);
-
-exports['default'] = Icon;
-
-Icon.defaultProps = {
-    size: 'md'
-};
-module.exports = exports['default'];
-
-/***/ }),
-/* 42 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(726);
-
-/***/ }),
-/* 43 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1557,7 +1450,7 @@ var _rmcNotification = __webpack_require__(728);
 
 var _rmcNotification2 = _interopRequireDefault(_rmcNotification);
 
-var _icon = __webpack_require__(41);
+var _icon = __webpack_require__(43);
 
 var _icon2 = _interopRequireDefault(_icon);
 
@@ -1660,7 +1553,7 @@ exports['default'] = {
 module.exports = exports['default'];
 
 /***/ }),
-/* 44 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1668,9 +1561,116 @@ module.exports = exports['default'];
 
 __webpack_require__(77);
 
-__webpack_require__(42);
+__webpack_require__(44);
 
 __webpack_require__(732);
+
+/***/ }),
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */,
+/* 43 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends2 = __webpack_require__(15);
+
+var _extends3 = _interopRequireDefault(_extends2);
+
+var _classCallCheck2 = __webpack_require__(10);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__(11);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = __webpack_require__(12);
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = __webpack_require__(13);
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _classnames = __webpack_require__(17);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _loadSprite = __webpack_require__(725);
+
+var _loadSprite2 = _interopRequireDefault(_loadSprite);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var __rest = undefined && undefined.__rest || function (s, e) {
+    var t = {};
+    for (var p in s) {
+        if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
+    }if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+        if (e.indexOf(p[i]) < 0) t[p[i]] = s[p[i]];
+    }return t;
+};
+
+var Icon = function (_React$Component) {
+    (0, _inherits3['default'])(Icon, _React$Component);
+
+    function Icon() {
+        (0, _classCallCheck3['default'])(this, Icon);
+        return (0, _possibleConstructorReturn3['default'])(this, (Icon.__proto__ || Object.getPrototypeOf(Icon)).apply(this, arguments));
+    }
+
+    (0, _createClass3['default'])(Icon, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            (0, _loadSprite2['default'])();
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _a = this.props,
+                type = _a.type,
+                className = _a.className,
+                size = _a.size,
+                restProps = __rest(_a, ["type", "className", "size"]);
+            var cls = (0, _classnames2['default'])(className, 'am-icon', 'am-icon-' + type, 'am-icon-' + size);
+            return _react2['default'].createElement(
+                'svg',
+                (0, _extends3['default'])({ className: cls }, restProps),
+                _react2['default'].createElement('use', { xlinkHref: '#' + type })
+            );
+        }
+    }]);
+    return Icon;
+}(_react2['default'].Component);
+
+exports['default'] = Icon;
+
+Icon.defaultProps = {
+    size: 'md'
+};
+module.exports = exports['default'];
+
+/***/ }),
+/* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(726);
 
 /***/ }),
 /* 45 */,
@@ -8993,7 +8993,7 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _icon = __webpack_require__(41);
+var _icon = __webpack_require__(43);
 
 var _icon2 = _interopRequireDefault(_icon);
 
@@ -9001,7 +9001,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _class, _class2, _temp;
 
-__webpack_require__(42);
+__webpack_require__(44);
 
 __webpack_require__(727);
 
@@ -32696,7 +32696,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = undefined;
 
-var _toast = __webpack_require__(43);
+var _toast = __webpack_require__(36);
 
 var _toast2 = _interopRequireDefault(_toast);
 
@@ -32704,7 +32704,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _class;
 
-__webpack_require__(44);
+__webpack_require__(37);
 
 var _CommodityCardModule = __webpack_require__(733);
 
@@ -32977,25 +32977,24 @@ var PointsConvertState = function PointsConvertState(query) {
 						_context.next = 3;
 						return this.ScrollViewState.loadInitData({
 							url: "/api/Good_Product/ListAsync",
-							data: { AppId: this.query['AppId'], sort: "CreateTime desc", openId: this.query['OpenId'] }
+							data: { AppId: sessionStorage.getItem('AppId'), sort: "CreateTime desc", openId: this.query['OpenId'] }
 						});
 
 					case 3:
-						console.log(this.ScrollViewState);
-						_context.next = 9;
+						_context.next = 8;
 						break;
 
-					case 6:
-						_context.prev = 6;
+					case 5:
+						_context.prev = 5;
 						_context.t0 = _context["catch"](0);
 						throw _context.t0;
 
-					case 9:
+					case 8:
 					case "end":
 						return _context.stop();
 				}
 			}
-		}, _callee, this, [[0, 6]]);
+		}, _callee, this, [[0, 5]]);
 	}));
 
 	this.ScrollViewState = new _ScrollViewMobx2.default();
@@ -33292,7 +33291,7 @@ exports.default = ApplicationStore;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_prop_types__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react_dom__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react_dom__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_react_dom__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__util__ = __webpack_require__(103);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Tween__ = __webpack_require__(753);
@@ -35753,7 +35752,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = undefined;
 
-var _icon = __webpack_require__(41);
+var _icon = __webpack_require__(43);
 
 var _icon2 = _interopRequireDefault(_icon);
 
@@ -35761,7 +35760,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _class, _temp;
 
-__webpack_require__(42);
+__webpack_require__(44);
 
 var _EditInputModule = __webpack_require__(833);
 
@@ -36280,7 +36279,7 @@ ReactDOM.render(React.createElement(
     React.createElement(_reactRouterDom.Route, { path: "/Submission", component: _Submission2.default })
   )
 ), target);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(40), __webpack_require__(2)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(42), __webpack_require__(2)))
 
 /***/ }),
 /* 633 */
@@ -36877,13 +36876,11 @@ var IndexPage = function (_React$Component) {
               case 0:
                 document.title = "会员中心";
 
-                localStorage.setItem("openId", this.query["openId"]);
-                localStorage.setItem("SeetingId", this.query["SeetingId"]);
-                _context.prev = 3;
-                _context.next = 6;
+                _context.prev = 1;
+                _context.next = 4;
                 return this.store.getUserIntegral();
 
-              case 6:
+              case 4:
                 result = _context.sent;
 
                 this.forceUpdate();
@@ -36896,43 +36893,47 @@ var IndexPage = function (_React$Component) {
                 if (result.Type == "1") {
                   window.location.replace("http://jzker.cn/#/");
                 }
-                _context.next = 15;
+                _context.next = 13;
                 break;
 
-              case 12:
-                _context.prev = 12;
-                _context.t0 = _context["catch"](3);
+              case 10:
+                _context.prev = 10;
+                _context.t0 = _context["catch"](1);
                 throw _context.t0;
 
-              case 15:
-                _context.prev = 15;
-                _context.next = 18;
+              case 13:
+                _context.prev = 13;
+                _context.next = 16;
                 return _api.ajax.get({
                   url: "/api/User_Account/GetTraslateListAsync/",
                   data: { accountId: _storage2.default.VipInfo["AccountId"] }
                 });
 
-              case 18:
+              case 16:
                 _result = _context.sent;
 
                 _storage2.default.setApplicationStoreInfo(_result);
+                sessionStorage.setItem("SeetingId", this.query["SeetingId"]);
+                sessionStorage.setItem('AppId', this.query['AppId']);
+                sessionStorage.setItem("openId", this.query["openId"]);
+                localStorage.setItem("openId", this.query["openId"]);
                 //console.log(result)
                 //console.log(storage.ApplicationStoreInfo);
                 this.setState({ data: _result });
-                _context.next = 26;
+                _context.next = 28;
                 break;
 
-              case 23:
-                _context.prev = 23;
-                _context.t1 = _context["catch"](15);
+              case 25:
+                _context.prev = 25;
+                _context.t1 = _context["catch"](13);
                 throw _context.t1;
 
-              case 26:
+              case 28:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this, [[3, 12], [15, 23]]);
+        }, _callee, this, [[1, 10], [13, 25]]);
       }));
 
       function componentDidMount() {
@@ -36964,7 +36965,7 @@ var IndexPage = function (_React$Component) {
       return [{
         text: "积分商城",
         icon: _CommonIconModule2.default["Store"],
-        to: "/PointsConvert?AccountId=" + _storage2.default.VipInfo["AccountId"] + "&OpenId=" + this.query["openId"] + "&AppId=" + this.query["AppId"]
+        to: "/PointsConvert?AccountId=" + _storage2.default.VipInfo["AccountId"] + "&OpenId=" + this.query["openId"]
       }, {
         text: "兑换记录",
         icon: _CommonIconModule2.default["ConvertRecord"],
@@ -40600,7 +40601,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(40);
+var _reactDom = __webpack_require__(42);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -40696,7 +40697,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react_dom__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react_dom__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_react_dom__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Dialog__ = __webpack_require__(690);
 
@@ -41146,7 +41147,7 @@ function mergeChildren(prev, next) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react_dom__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react_dom__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_react_dom__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_prop_types__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_prop_types__);
@@ -41756,7 +41757,7 @@ ClassList.prototype.contains = function(name){
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react_dom__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react_dom__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_react_dom__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_prop_types__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_prop_types__);
@@ -42390,7 +42391,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(40);
+var _reactDom = __webpack_require__(42);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -42470,7 +42471,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(40);
+var _reactDom = __webpack_require__(42);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -42917,17 +42918,17 @@ var VIPInfoBar = (0, _reactRouterDom.withRouter)(_class = function (_React$Compo
   }, {
     key: "toMyRights",
     value: function toMyRights() {
-      this.props.history.push("./MyRights?AccountId=" + _storage2.default.VipInfo.AccountId + "&OpenId=" + localStorage.openId);
+      this.props.history.push("./MyRights?AccountId=" + _storage2.default.VipInfo.AccountId + "&OpenId=" + sessionStorage.openId);
     }
   }, {
     key: "toLevel",
     value: function toLevel() {
-      this.props.history.push("./MyRights?AccountId=" + _storage2.default.VipInfo.AccountId + "&OpenId=" + localStorage.openId);
+      this.props.history.push("./MyRights?AccountId=" + _storage2.default.VipInfo.AccountId + "&OpenId=" + sessionStorage.openId);
     }
   }, {
     key: "tomyPoints",
     value: function tomyPoints() {
-      this.props.history.push('./Points?AccountId=' + _storage2.default.VipInfo['AccountId'] + "&OpenId=" + localStorage.openId + '&SeetingId=' + localStorage.SeetingId);
+      this.props.history.push('./Points?AccountId=' + _storage2.default.VipInfo['AccountId'] + "&OpenId=" + sessionStorage.openId + '&SeetingId=' + sessionStorage.SeetingId);
     }
   }]);
 
@@ -44288,7 +44289,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_prop_types__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_react_dom__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_react_dom__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_react_dom__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_rc_animate__ = __webpack_require__(380);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_rc_util_es_createChainedFunction__ = __webpack_require__(730);
@@ -44766,7 +44767,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _toast = __webpack_require__(43);
+var _toast = __webpack_require__(36);
 
 var _toast2 = _interopRequireDefault(_toast);
 
@@ -44786,7 +44787,7 @@ var _List2 = __webpack_require__(78);
 
 var _List3 = _interopRequireDefault(_List2);
 
-var _icon = __webpack_require__(41);
+var _icon = __webpack_require__(43);
 
 var _icon2 = _interopRequireDefault(_icon);
 
@@ -44800,7 +44801,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _class;
 
-__webpack_require__(44);
+__webpack_require__(37);
 
 __webpack_require__(35);
 
@@ -44810,7 +44811,7 @@ __webpack_require__(191);
 
 __webpack_require__(79);
 
-__webpack_require__(42);
+__webpack_require__(44);
 
 __webpack_require__(192);
 
@@ -50934,7 +50935,7 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _toast = __webpack_require__(43);
+var _toast = __webpack_require__(36);
 
 var _toast2 = _interopRequireDefault(_toast);
 
@@ -50946,7 +50947,7 @@ var _ButtonPromise2 = __webpack_require__(100);
 
 var _ButtonPromise3 = _interopRequireDefault(_ButtonPromise2);
 
-var _icon = __webpack_require__(41);
+var _icon = __webpack_require__(43);
 
 var _icon2 = _interopRequireDefault(_icon);
 
@@ -50958,13 +50959,13 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _class;
 
-__webpack_require__(44);
+__webpack_require__(37);
 
 __webpack_require__(35);
 
 __webpack_require__(101);
 
-__webpack_require__(42);
+__webpack_require__(44);
 
 __webpack_require__(79);
 
@@ -51169,13 +51170,13 @@ var PaymentOrderForm = (0, _reactRouterDom.withRouter)(_class = (0, _mobxReact.o
 								_context2.next = 7;
 								return _api.ajax.get({
 									url: "/api/User_Account/User_IntegralDetailListAsync",
-									data: { openId: localStorage.openId }
+									data: { openId: sessionStorage.getItem('openId') }
 								});
 
 							case 7:
 								result = _context2.sent;
 
-								console.log(result);
+								//	console.log(result);
 								this.setState({ data: result });
 								this.setState({ naturlOrderNumber: result.Effectiveintegral });
 								payOrderNumber = Math.abs(this.store.PayOrderform.get("DeductIntergral"));
@@ -51186,30 +51187,30 @@ var PaymentOrderForm = (0, _reactRouterDom.withRouter)(_class = (0, _mobxReact.o
 								} else {
 									this.setState({ flag: '0' });
 								}
-								_context2.next = 19;
+								_context2.next = 18;
 								break;
 
-							case 16:
-								_context2.prev = 16;
+							case 15:
+								_context2.prev = 15;
 								_context2.t0 = _context2["catch"](1);
 								throw _context2.t0;
 
-							case 19:
-								_context2.prev = 19;
-								_context2.next = 25;
+							case 18:
+								_context2.prev = 18;
+								_context2.next = 24;
 								break;
 
-							case 22:
-								_context2.prev = 22;
-								_context2.t1 = _context2["catch"](19);
+							case 21:
+								_context2.prev = 21;
+								_context2.t1 = _context2["catch"](18);
 								throw _context2.t1;
 
-							case 25:
+							case 24:
 							case "end":
 								return _context2.stop();
 						}
 					}
-				}, _callee2, this, [[1, 16], [19, 22]]);
+				}, _callee2, this, [[1, 15], [18, 21]]);
 			}));
 
 			function componentDidMount() {
@@ -51343,20 +51344,20 @@ var PaymentOrderFormState = (_class = function PaymentOrderFormState(query) {
 
 
 						this.PayOrderform = _mobx.observable.map(result);
-						console.log(result);
+						//console.log(result);
 						return _context.abrupt("return", result);
 
-					case 9:
-						_context.prev = 9;
+					case 8:
+						_context.prev = 8;
 						_context.t0 = _context["catch"](0);
 						throw _context.t0;
 
-					case 12:
+					case 11:
 					case "end":
 						return _context.stop();
 				}
 			}
-		}, _callee, this, [[0, 9]]);
+		}, _callee, this, [[0, 8]]);
 	}));
 
 	this.query = query;
@@ -51387,7 +51388,7 @@ var _List2 = __webpack_require__(78);
 
 var _List3 = _interopRequireDefault(_List2);
 
-var _icon = __webpack_require__(41);
+var _icon = __webpack_require__(43);
 
 var _icon2 = _interopRequireDefault(_icon);
 
@@ -51405,7 +51406,7 @@ __webpack_require__(35);
 
 __webpack_require__(79);
 
-__webpack_require__(42);
+__webpack_require__(44);
 
 __webpack_require__(393);
 
@@ -51576,30 +51577,29 @@ var PaymentOrderForm = (0, _mobxReact.observer)(_class = function (_React$Compon
 						switch (_context.prev = _context.next) {
 							case 0:
 								document.title = "下单结果";
-								console.log(_storage2.default.VipInfo.AccounId);
 								number = Math.abs(this.query["DeductIntergral"]);
 
 								this.setState({ DeductIntergral: number });
-								_context.prev = 4;
-								_context.next = 7;
+								_context.prev = 3;
+								_context.next = 6;
 								return this.store.getCommoditList();
 
-							case 7:
-								_context.next = 12;
+							case 6:
+								_context.next = 11;
 								break;
 
-							case 9:
-								_context.prev = 9;
-								_context.t0 = _context["catch"](4);
+							case 8:
+								_context.prev = 8;
+								_context.t0 = _context["catch"](3);
 
 								console.log(_context.t0);
 
-							case 12:
+							case 11:
 							case "end":
 								return _context.stop();
 						}
 					}
-				}, _callee, this, [[4, 9]]);
+				}, _callee, this, [[3, 8]]);
 			}));
 
 			function componentDidMount() {
@@ -51633,7 +51633,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _toast = __webpack_require__(43);
+var _toast = __webpack_require__(36);
 
 var _toast2 = _interopRequireDefault(_toast);
 
@@ -51649,7 +51649,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _class;
 
-__webpack_require__(44);
+__webpack_require__(37);
 
 __webpack_require__(136);
 
@@ -53208,13 +53208,13 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _toast = __webpack_require__(43);
+var _toast = __webpack_require__(36);
 
 var _toast2 = _interopRequireDefault(_toast);
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-__webpack_require__(44);
+__webpack_require__(37);
 
 var _api = __webpack_require__(9);
 
@@ -53662,7 +53662,7 @@ var Points = (0, _reactRouterDom.withRouter)(_class = function (_React$Component
                                 _context.next = 14;
                                 return _api.ajax.get({
                                     url: "/api/Wx_Good_Catalog_Score/ListAsync",
-                                    data: { wx_SeetingId: this.query['SeetingId'], openId: this.query["OpenId"] }
+                                    data: { wx_SeetingId: sessionStorage.getItem('SeetingId'), openId: this.query["OpenId"] }
                                 });
 
                             case 14:
@@ -53996,7 +53996,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _icon = __webpack_require__(41);
+var _icon = __webpack_require__(43);
 
 var _icon2 = _interopRequireDefault(_icon);
 
@@ -54004,7 +54004,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-__webpack_require__(42);
+__webpack_require__(44);
 
 __webpack_require__(804);
 
@@ -54862,7 +54862,7 @@ var _List2 = __webpack_require__(78);
 
 var _List3 = _interopRequireDefault(_List2);
 
-var _icon = __webpack_require__(41);
+var _icon = __webpack_require__(43);
 
 var _icon2 = _interopRequireDefault(_icon);
 
@@ -54874,7 +54874,7 @@ var _class;
 
 __webpack_require__(79);
 
-__webpack_require__(42);
+__webpack_require__(44);
 
 __webpack_require__(811);
 
@@ -56126,13 +56126,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _toast = __webpack_require__(43);
+var _toast = __webpack_require__(36);
 
 var _toast2 = _interopRequireDefault(_toast);
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-__webpack_require__(44);
+__webpack_require__(37);
 
 var _api = __webpack_require__(9);
 
@@ -56827,7 +56827,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _toast = __webpack_require__(43);
+var _toast = __webpack_require__(36);
 
 var _toast2 = _interopRequireDefault(_toast);
 
@@ -56839,7 +56839,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-__webpack_require__(44);
+__webpack_require__(37);
 
 __webpack_require__(90);
 
@@ -57199,7 +57199,7 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _toast = __webpack_require__(43);
+var _toast = __webpack_require__(36);
 
 var _toast2 = _interopRequireDefault(_toast);
 
@@ -57235,7 +57235,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _dec, _class;
 
-__webpack_require__(44);
+__webpack_require__(37);
 
 __webpack_require__(192);
 
@@ -77057,14 +77057,15 @@ var SubmissionKind = (0, _mobxReact.observer)(_class = function (_React$Componen
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                if (this.store.ScrollViewState3.dataList.length == 0) {
-                  this.refs.hidePic3.style.display = 'block ';
-                }
                 if (this.store.ScrollViewState1.dataList.length == 0) {
                   this.refs.hidePic1.style.display = 'block';
                 }
                 if (this.store.ScrollViewState2.dataList.length == 0) {
                   this.refs.hidePic2.style.display = 'block';
+                }
+
+                if (this.store.ScrollViewState3.dataList.length == 0) {
+                  this.refs.hidePic3.style.display = 'block ';
                 }
 
               case 3:
@@ -77085,8 +77086,6 @@ var SubmissionKind = (0, _mobxReact.observer)(_class = function (_React$Componen
     key: "componentDidMount",
     value: function () {
       var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
-        var _this2 = this;
-
         var result, result_1, result_2;
         return regeneratorRuntime.wrap(function _callee2$(_context2) {
           while (1) {
@@ -77095,42 +77094,31 @@ var SubmissionKind = (0, _mobxReact.observer)(_class = function (_React$Componen
                 document.title = '我的凭证';
                 _context2.prev = 1;
 
-                setTimeout(function () {
-                  if (_this2.store.ScrollViewState1.dataList.length == 0) {
-                    _this2.refs.hidePic1.style.display = "block";
-                  }
-                  if (_this2.store.ScrollViewState2.dataList.length == 0) {
-                    _this2.refs.hidePic2.style.display = 'block';
-                  }
-                }, 750);
-                _context2.next = 5;
+                this.refs.hidePic1.style.display = 'none';
+                this.refs.hidePic2.style.display = 'none';
+                _context2.next = 6;
                 return this.store.getSubmissionKindList();
 
-              case 5:
+              case 6:
                 result = _context2.sent;
-                _context2.next = 8;
+                _context2.next = 9;
                 return this.store.getSubmissionKindList_1();
 
-              case 8:
+              case 9:
                 result_1 = _context2.sent;
-                _context2.next = 11;
+                _context2.next = 12;
                 return this.store.getSubmissionKindList_2();
 
-              case 11:
+              case 12:
                 result_2 = _context2.sent;
-
-                if (this.store.ScrollViewState1.dataList.length > 0) {
-                  this.refs.hidePic1.style.display = 'none';
-                }
-                if (this.store.ScrollViewState2.dataList.length > 0) {
-                  this.refs.hidePic2.style.display = 'none';
-                }
                 _context2.next = 19;
                 break;
 
-              case 16:
-                _context2.prev = 16;
+              case 15:
+                _context2.prev = 15;
                 _context2.t0 = _context2["catch"](1);
+
+                this.refs.hidePic1.style.display = "block";
                 throw _context2.t0;
 
               case 19:
@@ -77138,7 +77126,7 @@ var SubmissionKind = (0, _mobxReact.observer)(_class = function (_React$Componen
                 return _context2.stop();
             }
           }
-        }, _callee2, this, [[1, 16]]);
+        }, _callee2, this, [[1, 15]]);
       }));
 
       function componentDidMount() {
@@ -77290,13 +77278,11 @@ var SubmissionKindItem = (0, _reactRouterDom.withRouter)(_class = function (_Rea
                     a: { color: '#FF8B17' },
                     b: { color: '#FF8B17' },
                     c: { display: 'none' }
-
                 };
             }
             return {
                 a: { color: '#08b014' },
                 b: { color: '#08b014' }
-
             };
         }
     }]);
@@ -77450,7 +77436,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _toast = __webpack_require__(43);
+var _toast = __webpack_require__(36);
 
 var _toast2 = _interopRequireDefault(_toast);
 
@@ -77478,7 +77464,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _dec, _class;
 
-__webpack_require__(44);
+__webpack_require__(37);
 
 __webpack_require__(35);
 
@@ -77940,7 +77926,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = undefined;
 
-var _toast = __webpack_require__(43);
+var _toast = __webpack_require__(36);
 
 var _toast2 = _interopRequireDefault(_toast);
 
@@ -77948,7 +77934,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _desc, _value, _class, _descriptor, _descriptor2;
 
-__webpack_require__(44);
+__webpack_require__(37);
 
 var _mobx = __webpack_require__(22);
 
@@ -78038,7 +78024,7 @@ var AddSubmissionState = (_class = function () {
                                 data: Object.assign({
                                     openId: this.query['OpenId'],
                                     user_AccountId: this.query['AccountId'],
-                                    wx_SeetingId: '1'
+                                    wx_SeetingId: sessionStorage.getItem('SeetingId')
                                 }, this.Form)
                             });
 
@@ -78081,7 +78067,7 @@ var AddSubmissionState = (_class = function () {
                             _context2.next = 3;
                             return _api.ajax.get({
                                 url: "/api/Wx_Good_Catalog_Score/SelectWx_Good_Catalog_ScoreLIstAsync",
-                                data: { wx_SeetingId: localStorage.getItem('SeetingId') }
+                                data: { wx_SeetingId: sessionStorage.getItem('SeetingId') }
                             });
 
                         case 3:
@@ -78276,7 +78262,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = undefined;
 
-var _icon = __webpack_require__(41);
+var _icon = __webpack_require__(43);
 
 var _icon2 = _interopRequireDefault(_icon);
 
@@ -78284,7 +78270,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _class, _temp2;
 
-__webpack_require__(42);
+__webpack_require__(44);
 
 var _DisplayTempImageModule = __webpack_require__(848);
 
@@ -78566,6 +78552,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _toast = __webpack_require__(36);
+
+var _toast2 = _interopRequireDefault(_toast);
+
 var _Page2 = __webpack_require__(34);
 
 var _Page3 = _interopRequireDefault(_Page2);
@@ -78574,7 +78564,7 @@ var _ButtonPromise2 = __webpack_require__(100);
 
 var _ButtonPromise3 = _interopRequireDefault(_ButtonPromise2);
 
-var _icon = __webpack_require__(41);
+var _icon = __webpack_require__(43);
 
 var _icon2 = _interopRequireDefault(_icon);
 
@@ -78592,11 +78582,13 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _class;
 
+__webpack_require__(37);
+
 __webpack_require__(35);
 
 __webpack_require__(101);
 
-__webpack_require__(42);
+__webpack_require__(44);
 
 __webpack_require__(79);
 
@@ -78878,24 +78870,26 @@ var SubmissionKindDetail = (0, _mobxReact.observer)(_class = function (_React$Co
             switch (_context2.prev = _context2.next) {
               case 0:
                 document.title = "凭证详情";
-                _context2.prev = 1;
-                _context2.next = 4;
+                _toast2.default.loading('loading...', 30);
+                _context2.prev = 2;
+                _context2.next = 5;
                 return this.store.getDetaList();
 
-              case 4:
+              case 5:
                 result = _context2.sent;
 
                 //console.log(this.store.List.AuditState);
+                _toast2.default.hide();
                 this.forceUpdate();
-                _context2.next = 11;
+                _context2.next = 13;
                 break;
 
-              case 8:
-                _context2.prev = 8;
-                _context2.t0 = _context2["catch"](1);
+              case 10:
+                _context2.prev = 10;
+                _context2.t0 = _context2["catch"](2);
                 throw _context2.t0;
 
-              case 11:
+              case 13:
                 formatData = _storage2.default.ApplicationStoreInfo.data.map(function (Item) {
                   return { value: String(Item["TraslateId"]), label: Item["TraslateName"] };
                 });
@@ -78906,12 +78900,12 @@ var SubmissionKindDetail = (0, _mobxReact.observer)(_class = function (_React$Co
 
                 this.setState({ shopName: findResult.label });
 
-              case 14:
+              case 16:
               case "end":
                 return _context2.stop();
             }
           }
-        }, _callee2, this, [[1, 8]]);
+        }, _callee2, this, [[2, 10]]);
       }));
 
       function componentDidMount() {
@@ -78976,7 +78970,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = undefined;
 
-var _toast = __webpack_require__(43);
+var _toast = __webpack_require__(36);
 
 var _toast2 = _interopRequireDefault(_toast);
 
@@ -78984,7 +78978,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _desc, _value, _class, _descriptor;
 
-__webpack_require__(44);
+__webpack_require__(37);
 
 var _mobx = __webpack_require__(22);
 
@@ -79060,7 +79054,6 @@ var SubmissionDetaState = (_class = function () {
                             result = _context.sent;
 
                             this.ListMap = _mobx.observable.map(result.data[0]);
-                            //console.log(result)
                             _context.next = 10;
                             break;
 
@@ -79216,7 +79209,7 @@ var _Page2 = __webpack_require__(34);
 
 var _Page3 = _interopRequireDefault(_Page2);
 
-var _icon = __webpack_require__(41);
+var _icon = __webpack_require__(43);
 
 var _icon2 = _interopRequireDefault(_icon);
 
@@ -79224,7 +79217,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 __webpack_require__(35);
 
-__webpack_require__(42);
+__webpack_require__(44);
 
 __webpack_require__(856);
 
@@ -79254,8 +79247,8 @@ var SubmissionResult = function (_React$Component) {
           { className: "topText" },
           React.createElement(
             "span",
-            null,
-            React.createElement(_icon2.default, { type: "check-circle", color: "#03C235", size: "lg" })
+            { style: { marginTop: '6px' } },
+            React.createElement(_icon2.default, { type: "check-circle", color: "#1AAE15", size: "md" })
           ),
           React.createElement(
             "p",
@@ -79264,21 +79257,25 @@ var SubmissionResult = function (_React$Component) {
           )
         ),
         React.createElement(
-          _Page3.default.Bottom,
-          { className: "Contued Btn" },
+          "div",
+          { className: "BtnBox" },
           React.createElement(
-            "div",
-            { onClick: this.Contued.bind(this) },
-            "继续提交"
-          )
-        ),
-        React.createElement(
-          _Page3.default.Bottom,
-          { className: "cancel Btn" },
+            _Page3.default.Bottom,
+            { className: "Contued Btn" },
+            React.createElement(
+              "div",
+              { onClick: this.Contued.bind(this) },
+              "继续提交"
+            )
+          ),
           React.createElement(
-            "div",
-            { onClick: this.cancel.bind(this) },
-            "取消"
+            _Page3.default.Bottom,
+            { className: "cancel Btn" },
+            React.createElement(
+              "div",
+              { onClick: this.cancel.bind(this) },
+              "取消"
+            )
           )
         )
       );
@@ -79304,6 +79301,11 @@ var SubmissionResult = function (_React$Component) {
     key: "cancel",
     value: function cancel() {
       this.props.history.replace('/Submission?OpenId=' + this.query['OpenId'] + '&AccountId=' + this.query['AccountId']);
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      document.title = '提交结果';
     }
   }]);
 

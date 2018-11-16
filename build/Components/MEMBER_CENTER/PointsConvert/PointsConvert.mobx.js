@@ -12,9 +12,9 @@ export default class PointsConvertState {
 		try{
 			yield this.ScrollViewState.loadInitData({
 				url:"/api/Good_Product/ListAsync",
-				data: { AppId: this.query['AppId'], sort: "CreateTime desc", openId: this.query['OpenId']}
+				data: { AppId: sessionStorage.getItem('AppId'), sort: "CreateTime desc", openId: this.query['OpenId']}
 			})
-			console.log(this.ScrollViewState);
+			//console.log(this.ScrollViewState);
 		}catch(error){
 			throw error
 		}

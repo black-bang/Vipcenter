@@ -86,7 +86,7 @@ class SubmissionKindDetail extends React.Component {
             </div> */}
           </div>
           <div ref='btn' style={this.ComputedStyle.c} className="DateilBtn">
-            <ButtonPromise style={this.ComputedStyle} onClick={this.handleSave.bind(this)} active={this.submit}>
+            <ButtonPromise  onClick={this.handleSave.bind(this)} active={this.submit}>
               {"取消申请"}
             </ButtonPromise>
           </div>
@@ -150,9 +150,11 @@ class SubmissionKindDetail extends React.Component {
   }
   async componentDidMount() {
     document.title = "凭证详情";
+    Toast.loading('loading...', 30)
     try{
       const result = await this.store.getDetaList();
       //console.log(this.store.List.AuditState);
+      Toast.hide();
       this.forceUpdate();    
     }catch(error){
         throw error
